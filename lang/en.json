@@ -1,4 +1,5 @@
 {
+  "meta-home": "Global Nexus | Digital Marketing & Web Development Agency",
   "nav_home": "Home",
   "nav_about": "About",
   "nav_services": "Services",
@@ -181,12 +182,15 @@
   "footer_contact_email": "Email Us",
   "footer_copyright": "Global Nexus. All rights reserved.",
   
+  "meta-blog": "Blog | Global Nexus",
   "blog_header_title": "Global Nexus Blog",
-  "blog_back": "← Back to Blog",
+  "meta-blogdetails": "Blog Details | Global Nexus",
+  "blog_back": "Back to Blog",
   "blog_error_not_found": "Blog post not found.",
   "blog_error_load": "Failed to load blog details. Please try again later.",
   "blog_error_load_posts": "Failed to load blog posts. Please try again later.",
   
+  "meta-contact": "Contact Us | Global Nexus",
   "contact_title": "Contact Us",
   "contact_subtitle": "Have a project in mind? Reach out to us and let's build something amazing together.",
   "contact_form_title": "Get in Touch",

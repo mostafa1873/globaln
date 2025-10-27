@@ -14,9 +14,11 @@ function getPath(filePath) {
 }
 
 // Get current year for footer
+
 document.getElementById('year').textContent = new Date().getFullYear();
 
 // Navbar scroll effect
+
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
   if (window.scrollY > 80) {
@@ -26,10 +28,10 @@ window.addEventListener('scroll', () => {
   }
 });
 
-// ================= BACK TO HOME FUNCTION =================
+//  BACK TO HOME 
+
 function goToHome() {
-  // **التعديل هنا:** استخدام المُتغير العام currentLang لضمان العودة بنفس اللغة المعروضة حالياً
-  // إذا لم يكن currentLang موجوداً لسبب ما، نعتمد على القيمة المخزنة أو الافتراضية 'en'
+
   const lang = typeof currentLang !== 'undefined' ? currentLang : localStorage.getItem('lang') || 'en';
   const indexPath = getPath('index.html');
   window.location.href = `${indexPath}?lang=${lang}`;
