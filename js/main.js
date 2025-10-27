@@ -1,10 +1,16 @@
 // Dynamic path resolution for working on both localhost and GitHub Pages
 function getPath(filePath) {
-  const pathParts = window.location.pathname.split('/').filter(p => p);
-  if (pathParts.length <= 1 && !window.location.pathname.includes('page')) {
-    return filePath;
+  const path = window.location.pathname;
+
+  // 1. If we are inside the '/page/' directory (e.g., /nexus/page/blog.html)
+  // We must go up one level to reach the root, where lang/ and blog.json reside.
+  if (path.includes('/page/')) {
+    return '../' + filePath;
   }
-  return '../' + filePath;
+
+  // 2. If we are in the root directory (e.g., /nexus/index.html)
+  // Files are accessed directly (./lang/ar.json)
+  return filePath;
 }
 
 // Get current year for footer
