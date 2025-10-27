@@ -1683,13 +1683,18 @@ html[lang="ar"] .footer-contact {
 }
 
 html[lang="ar"] .footer-brand h3 img {
-  margin: 0 0 0 auto;
+  margin:auto;
 }
 
 html[lang="ar"] .footer-links h4::after,
 html[lang="ar"] .footer-contact h4::after {
   left: auto;
   right: 0;
+}
+
+html[lang="ar"] .footer-bottom p
+{
+  text-align: center;
 }
 
 /* FOOTER  */
