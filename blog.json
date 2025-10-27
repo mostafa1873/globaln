@@ -1,0 +1,83 @@
+[
+  {
+    "id": 1,
+    "title_en": "AI Automation for Businesses",
+    "title_ar": "أتمتة الذكاء الاصطناعي للأعمال",
+    "date": "2025-10-25",
+    "image": "img/blog.png",
+    "content_en": "Learn how AI can automate repetitive tasks and increase efficiency in your business.",
+    "content_ar": "تعرف على كيفية استخدام الذكاء الاصطناعي لأتمتة المهام المتكررة وزيادة كفاءة عملك."
+  },
+  {
+    "id": 2,
+    "title_en": "Mobile App Development Trends",
+    "title_ar": "اتجاهات تطوير تطبيقات الجوال",
+    "date": "2025-09-12",
+    "image": "img/blog.png",
+    "content_en": "Discover the latest trends in mobile app development for 2025.",
+    "content_ar": "اكتشف أحدث اتجاهات تطوير تطبيقات الجوال لعام 2025."
+  },
+  {
+    "id": 3,
+    "title_en": "Digital Marketing Strategies",
+    "title_ar": "استراتيجيات التسويق الرقمي",
+    "date": "2025-08-30",
+    "image": "img/blog.png",
+    "content_en": "Effective marketing strategies to boost your online presence and engagement.",
+    "content_ar": "استراتيجيات فعالة لتعزيز حضورك الرقمي وزيادة التفاعل عبر الإنترنت."
+  },
+  {
+    "id": 4,
+    "title_en": "AI Automation for Businesses",
+    "title_ar": "أتمتة الذكاء الاصطناعي للأعمال",
+    "date": "2025-10-25",
+    "image": "img/blog.png",
+    "content_en": "Learn how AI can automate repetitive tasks and increase efficiency in your business.",
+    "content_ar": "تعرف على كيفية استخدام الذكاء الاصطناعي لأتمتة المهام المتكررة وزيادة كفاءة عملك."
+  },
+  {
+    "id": 5,
+    "title_en": "Mobile App Development Trends",
+    "title_ar": "اتجاهات تطوير تطبيقات الجوال",
+    "date": "2025-09-12",
+    "image": "img/blog.png",
+    "content_en": "Discover the latest trends in mobile app development for 2025.",
+    "content_ar": "اكتشف أحدث اتجاهات تطوير تطبيقات الجوال لعام 2025."
+  },
+  {
+    "id": 6,
+    "title_en": "Digital Marketing Strategies",
+    "title_ar": "استراتيجيات التسويق الرقمي",
+    "date": "2025-08-30",
+    "image": "img/blog.png",
+    "content_en": "Effective marketing strategies to boost your online presence and engagement.",
+    "content_ar": "استراتيجيات فعالة لتعزيز حضورك الرقمي وزيادة التفاعل عبر الإنترنت."
+  },
+  {
+    "id": 7,
+    "title_en": "AI Automation for Businesses",
+    "title_ar": "أتمتة الذكاء الاصطناعي للأعمال",
+    "date": "2025-10-25",
+    "image": "img/blog.png",
+    "content_en": "Learn how AI can automate repetitive tasks and increase efficiency in your business.",
+    "content_ar": "تعرف على كيفية استخدام الذكاء الاصطناعي لأتمتة المهام المتكررة وزيادة كفاءة عملك."
+  },
+  {
+    "id": 8,
+    "title_en": "Mobile App Development Trends",
+    "title_ar": "اتجاهات تطوير تطبيقات الجوال",
+    "date": "2025-09-12",
+    "image": "img/blog.png",
+    "content_en": "Discover the latest trends in mobile app development for 2025.",
+    "content_ar": "اكتشف أحدث اتجاهات تطوير تطبيقات الجوال لعام 2025."
+  },
+  {
+    "id": 9,
+    "title_en": "Digital Marketing Strategies",
+    "title_ar": "استراتيجيات التسويق الرقمي",
+    "date": "2025-08-30",
+    "image": "img/blog.png",
+    "content_en": "Effective marketing strategies to boost your online presence and engagement.",
+    "content_ar": "استراتيجيات فعالة لتعزيز حضورك الرقمي وزيادة التفاعل عبر الإنترنت."
+  }
+]
