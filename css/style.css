@@ -133,6 +133,7 @@ html[dir="rtl"] .image-text-section {
   width: auto;
   transition: all 0.15s ease-in-out;
   margin-left: -20px;
+  margin-bottom: -11px;
 }
 
 html[lang="ar"] .logo img
@@ -1500,7 +1501,6 @@ html[dir="rtl"] .blog-title {
   border-top-right-radius: 35px;
   color: #e2e8f0;
   padding: 80px 0 40px;
-  box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.4);
 }
 
 .footer-inner {
