@@ -258,3 +258,22 @@ function renderBlogDetails(blogs, lang) {
 
 // Initial fetch
 fetchAndRenderBlogs(currentLang);
+
+// DARK MOOD 
+
+const themeToggle = document.getElementById("theme-toggle");
+  const currentTheme = localStorage.getItem("theme");
+
+  if (currentTheme === "dark") {
+    document.body.classList.add("dark-mode");
+    themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+  }
+
+  themeToggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+    const isDark = document.body.classList.contains("dark-mode");
+    themeToggle.innerHTML = isDark
+      ? '<i class="fas fa-sun"></i>'
+      : '<i class="fas fa-moon"></i>';
+    localStorage.setItem("theme", isDark ? "dark" : "light");
+  });

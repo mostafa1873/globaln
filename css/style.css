@@ -674,9 +674,6 @@ html[lang="ar"] .trusted {
   padding: 100px 0;
 }
 
-
-/*  GRID 2x2 */
-
 .services-main-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -738,26 +735,63 @@ html[lang="ar"] .trusted {
 
 .service-features {
   display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
   margin-bottom: 25px;
+  padding: 0;
+  list-style: none;
 }
 
 .service-features span {
-  background: #eef4ff;
-  color: #007bff;
-  font-size: 0.85rem;
-  padding: 6px 12px;
-  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.95rem;
   font-weight: 500;
+  color: #071020;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 28px;
+  transition: all 0.25s ease;
+}
+
+/* الأيقونة */
+.service-features span::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #007bff;
+  box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.15);
   transition: all 0.3s ease;
 }
 
-.service-main-card:hover .service-features span {
-  background: #007bff;
-  color: #fff;
+/* حركة بسيطة عند المرور */
+.service-features span:hover {
+  color: #007bff;
+  transform: translateX(4px);
 }
+
+.service-features span:hover::before {
+  background: #00c4ff;
+  box-shadow: 0 0 0 6px rgba(0, 196, 255, 0.2);
+}
+
+/* دعم الاتجاه العربي */
+[dir="rtl"] .service-features span {
+  padding-left: 0;
+  padding-right: 28px;
+}
+
+[dir="rtl"] .service-features span::before {
+  left: auto;
+  right: 0;
+}
+
 
 .service-main-card .btn {
   background: #007bff;
@@ -2047,6 +2081,27 @@ html[lang="ar"] .footer-bottom p {
     min-height: 20vh;
   }
 
+  .service-features {
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+
+  .service-features span {
+    font-size: 0.9rem;
+    padding-left: 22px;
+  }
+
+  .service-features span::before {
+    width: 8px;
+    height: 8px;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.15);
+  }
+
+  [dir="rtl"] .service-features span {
+    padding-left: 0;
+    padding-right: 22px;
+  }
+
   .footer-brand h3 img {
     width: 250px !important;
     height: auto !important;
@@ -2193,3 +2248,29 @@ html[lang="ar"] .footer-bottom p {
     line-height: 1.5;
   }
 }
+
+@media (max-width: 480px) {
+  .service-features {
+    gap: 6px;
+  }
+
+  .service-features span {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    padding-left: 20px;
+  }
+
+  .service-features span::before {
+    width: 7px;
+    height: 7px;
+    box-shadow: 0 0 0 2.5px rgba(0, 123, 255, 0.12);
+  }
+
+  [dir="rtl"] .service-features span {
+    padding-left: 0;
+    padding-right: 20px;
+  }
+}
+
+
+
