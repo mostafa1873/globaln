@@ -137,7 +137,6 @@
   "contact_form_submit": "إرسال الرسالة",
   "contact_map_title": "ابحث عن موقعنا",
   "contact_map_subtitle": "موقع مكتبنا",
-
   "meta-markting": "التسويق الرقمي | جلوبال نيكسس",
   "marketing_page_hero_title": "التسويق الرقمي",
   "marketing_page_span-hero": "الذي يحقق التحويل",
@@ -154,20 +153,20 @@
   "marketing_page_pricing_subtitle": "باقات مرنة مصممة لتنمية أعمالك — اختر ما يناسب أهدافك على أفضل وجه.",
   "marketing_page_pricing_title": "خطط التسويق الرقمي",
   "marketing_page_pricing_btn": "تواصل عبر واتساب",
-  "marketing_page_pricing_basic_title": "الأساسية (BASIC)",
+  "marketing_page_pricing_basic_title": "الأساسية",
   "marketing_page_pricing_basic_sub": "مثالية للشركات الصغيرة",
   "marketing_page_pricing_basic_feat1": "إعداد وسائل التواصل الاجتماعي",
   "marketing_page_pricing_basic_feat2": "5 حملات إعلانية",
   "marketing_page_pricing_basic_feat3": "تقرير الأداء الشهري",
   "marketing_page_pricing_basic_feat4": "تحسين SEO أساسي",
-  "marketing_page_pricing_premium_title": "الممتازة (PREMIUM)",
+  "marketing_page_pricing_premium_title": "الاحترافية",
   "marketing_page_pricing_premium_sub": "الأفضل للعلامات التجارية النامية",
   "marketing_page_pricing_premium_feat1": "إعلانات باستهداف متقدم",
   "marketing_page_pricing_premium_feat2": "مكالمات استراتيجية أسبوعية",
   "marketing_page_pricing_premium_feat3": "بحث الكلمات المفتاحية و SEO",
   "marketing_page_pricing_premium_feat4": "إنشاء المحتوى (8 منشورات/شهريًا)",
   "marketing_page_pricing_premium_feat5": "لوحة تحكم للتحليلات",
-  "marketing_page_pricing_vip_title": "كبار الشخصيات (VIP)",
+  "marketing_page_pricing_vip_title": "كبار الشخصيات",
   "marketing_page_pricing_vip_sub": "استراتيجية مخصصة للفرق الكبيرة",
   "marketing_page_pricing_vip_feat1": "حزمة التسويق الرقمي الكاملة",
   "marketing_page_pricing_vip_feat2": "مدير حساب مخصص",
@@ -177,37 +176,49 @@
   "marketing_page_cta_title": "هل أنت مستعد لتنمية أعمالك؟",
   "marketing_page_cta_desc": "دعنا ننشئ استراتيجية تسويق تحقق نجاحًا قابلاً للقياس.",
   "marketing_page_cta_btn": "ابدأ حملتك اليوم",
-
   "meta_development": "تطوير المواقع والتطبيقات | جلوبال نيكسس",
-
   "development_page_hero_title": "تطوير التطبيقات والويب ",
   "development_page_span-hero": "نحو ريادة أعمالك",
   "development_page_hero_desc": "نقوم بتصميم وتطوير مواقع وتطبيقات سريعة الاستجابة وعالية الأداء مصممة لتناسب أهداف عملك.",
   "development_page_hero_cta": "ابدأ مشروعك القادم 🚀",
-
   "development_page_details_title": "لماذا تختار خدمات تطوير المواقع والتطبيقات لدينا؟",
   "development_page_details_desc": "من الفكرة إلى التنفيذ، نقدم حلول رقمية مخصصة تجمع بين الإبداع والوظائف العالية والقابلية للتوسع لضمان تميز علامتك التجارية عبر الإنترنت.",
-
   "development_page_details_feat1": "تصميم وتطوير المواقع",
   "development_page_details_feat2": "حلول المتاجر الإلكترونية",
   "development_page_details_feat3": "تطوير تطبيقات الموبايل",
   "development_page_details_feat4": "تصميم واجهات المستخدم وتجربة المستخدم",
   "development_page_details_feat5": "استضافة وصيانة المواقع",
-
   "development_page_pricing_title": "باقات تطوير المواقع والتطبيقات",
   "development_page_pricing_subtitle": "حلول مرنة مصممة لتناسب احتياجات عملك.",
-
+  "pricing_basic_title": "الأساسية",
+  "pricing_basic_subtitle": "للمواقع الصغيرة والشركات الناشئة",
+  "pricing_basic_feature_1": "موقع يحتوي على 3 صفحات",
+  "pricing_basic_feature_2": "تصميم متجاوب مع جميع الأجهزة",
+  "pricing_basic_feature_3": "دمج نموذج تواصل",
+  "pricing_basic_feature_4": "تهيئة أساسية لمحركات البحث (SEO)",
+  "pricing_basic_button": "تواصل عبر واتساب",
+  "pricing_pro_title": "الاحترافية",
+  "pricing_pro_subtitle": "للشركات المتنامية",
+  "pricing_pro_feature_1": "حتى 10 صفحات",
+  "pricing_pro_feature_2": "دمج متجر إلكتروني",
+  "pricing_pro_feature_3": "نظام إدارة محتوى (ووردبريس أو مخصص)",
+  "pricing_pro_feature_4": "تحليل وتهيئة متقدمة لمحركات البحث",
+  "pricing_pro_button": "تواصل عبر واتساب",
+  "pricing_enterprise_title": "كبار الشخصيات",
+  "pricing_enterprise_subtitle": "لأنظمة الويب واسعة النطاق",
+  "pricing_enterprise_feature_1": "حلول مخصصة للمواقع والتطبيقات",
+  "pricing_enterprise_feature_2": "تكاملات مع واجهات API",
+  "pricing_enterprise_feature_3": "نظام تصميم وتجربة مستخدم UI/UX",
+  "pricing_enterprise_feature_4": "دعم وصيانة على مدار الساعة",
+  "pricing_enterprise_button": "تواصل عبر واتساب",
   "development_page_cta_title": "هل أنت مستعد لإطلاق منتجك الرقمي؟",
   "development_page_cta_desc": "دعنا نحول رؤيتك إلى موقع أو تطبيق عالي الأداء.",
   "development_page_cta_btn": "ابدأ مشروعك اليوم",
-
   "meta-business": "حلول الأعمال | جلوبال نيكسس",
-
   "business_page_hero_title": "حلول أعمال",
-  "business_page_span-hero": "ذكية", 
+  "business_page_span-hero": "ذكية",
   "business_page_hero_desc": "مكّن شركتك بأنظمة حديثة تُنظم وتُؤتمت وتُساعدك على التوسع بكفاءة عالية.",
   "business_page_hero_cta": "طوّر أنظمتك 🧠",
-
   "business_page_details_title": "حوّل عمليات شركتك التجارية",
   "business_page_details_desc": "نُنشئ أنظمة أعمال مخصصة تساعدك في إدارة البيانات وأتمتة سير العمل وتحسين القرارات باستخدام حلول مدعومة بالتقنية.",
   "business_page_feat1": "أنظمة إدارة العملاء (CRM)",
@@ -215,63 +226,68 @@
   "business_page_feat3": "أدوات الأتمتة والذكاء الاصطناعي",
   "business_page_feat4": "تحليل البيانات",
   "business_page_feat5": "تكاملات مخصصة",
-
   "business_page_pricing_subtitle": "أنظمة مرنة مصممة لتناسب حجم شركتك وأهدافها.",
   "business_page_pricing_title": "خطط حلول الأعمال",
-  "business_page_basic_title": "البداية",
-  "business_page_basic_sub": "مثالية للفرق الصغيرة",
+  "business_page_basic_title": "الأساسية",
+  "business_page_basic_sub": "مثالي للفرق الصغيرة",
+  "business_page_basic_feature_1": "إعداد نظام إدارة العملاء (CRM)",
+  "business_page_basic_feature_2": "أتمتة سير العمل",
+  "business_page_basic_feature_3": "لوحة تحكم الفريق",
+  "business_page_basic_feature_4": "تقارير شهرية",
+  "business_page_basic_button": "تواصل عبر واتساب",
   "business_page_premium_title": "الاحترافية",
   "business_page_premium_sub": "الأفضل للشركات النامية",
-  "business_page_enterprise_title": "المؤسساتية",
-  "business_page_enterprise_sub": "نظام مخصص للمؤسسات الكبرى",
-
+  "business_page_premium_feature_1": "دمج CRM + ERP",
+  "business_page_premium_feature_2": "أتمتة باستخدام الذكاء الاصطناعي",
+  "business_page_premium_feature_3": "تحليلات متقدمة",
+  "business_page_premium_feature_4": "وحدات مخصصة",
+  "business_page_premium_button": "تواصل عبر واتساب",
+  "business_page_enterprise_title": "كبار الشخصيات",
+  "business_page_enterprise_sub": "نظام مخصص للمؤسسات",
+  "business_page_enterprise_feature_1": "مجموعة ERP كاملة",
+  "business_page_enterprise_feature_2": "مدير حساب مخصص",
+  "business_page_enterprise_feature_3": "حلول الذكاء الاصطناعي والبيانات",
+  "business_page_enterprise_feature_4": "دعم 24/7",
+  "business_page_enterprise_button": "تواصل عبر واتساب",
   "business_page_cta_title": "لنُنشئ مستقبل أعمالك معًا",
   "business_page_cta_desc": "تحدث مع خبرائنا واكتشف كيف يمكن للحلول الذكية أن تغير سير عملك.",
   "business_page_cta_btn": "ابدأ الآن 🚀",
-
   "meta-branding": "التصميم والإبداع للعلامات التجارية | جلوبال نيكسس",
-
   "branding_page_hero_title": "حلول الإبداع",
   "branding_page_span-hero": "للعلامات التجارية",
   "branding_page_hero_desc": "نحن نبني هويات بصرية قوية وأصيلة تميّز عملك وتتصل عاطفياً بجمهورك المستهدف.",
   "branding_page_hero_cta": "ابدأ رحلة بناء علامتك 🎨",
-  
   "branding_page_details_title": "هوية فريدة لرؤيتك",
   "branding_page_details_desc": "تتجاوز خدمات علامتنا التجارية الجماليات. نحن نمزج البحث العميق في السوق مع التميز في التصميم الإبداعي لضمان أن تكون رسالة علامتك واضحة ومتسقة ولا تُنسى عبر جميع المنصات.",
   "branding_page_details_feat1": "تصميم الشعار ودليل الأسلوب الشامل",
-  "branding_page_details_feat2": "تصميم الهوية البصرية الكاملة (الألوان، الخطوط)",
+  "branding_page_details_feat2": "تصميم الهوية البصرية الكاملة",
   "branding_page_details_feat3": "تجهيزات التسويق وتصميم المطبوعات",
   "branding_page_details_feat4": "التصوير الفوتوغرافي الاحترافي والإخراج الفني",
   "branding_page_details_feat5": "تصميم التغليف والمنتجات",
   "branding_page_details_feat6": "الرسوم المتحركة والمقاطع المرئية القصيرة (Motion Graphics)",
-
   "branding_page_pricing_subtitle": "باقات مرنة ومصممة خصيصاً لبناء وتعزيز الهوية الفريدة لعلامتك التجارية.",
   "branding_page_pricing_title": "باقات التصميم والإبداع للعلامات التجارية",
   "branding_page_pricing_btn": "تواصل عبر واتساب",
-
-  "branding_page_pricing_basic_title": "بداية العلامة (Brand Starter)",
+  "branding_page_pricing_basic_title": "الأساسي",
   "branding_page_pricing_basic_sub": "مثالية للشركات الناشئة أو الأعمال متناهية الصغر.",
   "branding_page_pricing_basic_feat1": "تصميم الشعار الأساسي (2 مقترح)",
   "branding_page_pricing_basic_feat2": "لوحة الألوان الأساسية واختيار الخطوط",
   "branding_page_pricing_basic_feat3": "تصميم بطاقة العمل (Business Card)",
   "branding_page_pricing_basic_feat4": "ملفات نهائية للطباعة والويب",
-
-  "branding_page_pricing_premium_title": "هوية متكاملة (Full Identity)",
+  "branding_page_pricing_premium_title": "الاحترافي",
   "branding_page_pricing_premium_sub": "موصى بها للعلامات التجارية النامية التي تبحث عن رؤية كاملة.",
   "branding_page_pricing_premium_feat1": "نظام هوية بصرية كامل",
   "branding_page_pricing_premium_feat2": "دليل الأسلوب الشامل للعلامة التجارية (PDF)",
   "branding_page_pricing_premium_feat3": "قوالب وسائل التواصل الاجتماعي (5 تصاميم)",
   "branding_page_pricing_premium_feat4": "تنقيح صور احترافي (5 صور)",
   "branding_page_pricing_premium_feat5": "إعلان رسوم متحركة (Motion Graphic)",
-
-  "branding_page_pricing_vip_title": "استوديو كبار الشخصيات (VIP Custom Studio)",
+  "branding_page_pricing_vip_title": "كبار الشخصيات",
   "branding_page_pricing_vip_sub": "استراتيجية مصممة خصيصاً للمؤسسات القائمة أو الإطلاقات الكبيرة.",
   "branding_page_pricing_vip_feat1": "ورشة عمل استراتيجية وتسمية العلامة التجارية",
   "branding_page_pricing_vip_feat2": "تصميم التغليف (لحد أقصى 3 منتجات)",
   "branding_page_pricing_vip_feat3": "مصمم أول مخصص للحساب",
   "branding_page_pricing_vip_feat4": "قناة دعم تصميم على مدار الساعة",
   "branding_page_pricing_vip_feat5": "نقل كامل لحقوق الملكية الفكرية",
-  
   "branding_page_cta_title": "هل أنت مستعد لعلامة تجارية تبرز؟",
   "branding_page_cta_desc": "دعنا نحدد صوتك الفريد وسردك البصري في السوق.",
   "branding_page_cta_btn": "احجز استشارة لعلامتك التجارية"

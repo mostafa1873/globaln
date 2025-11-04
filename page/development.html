@@ -66,6 +66,10 @@
                     <li><a href="blog.html" data-lang="nav_blog">Blog</a></li>
                     <li><a href="contact.html" data-lang="nav_contact">Contact</a></li>
 
+                    <button id="theme-toggle" class="theme-toggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+
                     <li class="lang-dropdown">
                         <button id="langBtn" class="lang-btn" data-lang="nav_lang_english">English</button>
                         <ul class="lang-menu" id="langMenu">
@@ -90,6 +94,10 @@
                 <li><a href="blog.html" data-lang="nav_blog">Blog</a></li>
                 <li><a href="contact.html" data-lang="nav_contact">Contact</a></li>
 
+                <button style="margin-bottom: 20px;" id="theme-toggle" class="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+
                 <li class="lang-dropdown mobile-lang">
                     <button id="langBtnMobile" class="lang-btn" data-lang="nav_lang_english">English</button>
                     <ul class="lang-menu" id="langMenuMobile">
@@ -107,7 +115,8 @@
     <section class="service-hero curved">
         <div class="container hero-grid">
             <div class="hero-text">
-                <h1><span data-lang="development_page_hero_title">Web, App Development</span> <span class="span-2" data-lang="development_page_span-hero">That Drives Growth</span></h1>
+                <h1><span data-lang="development_page_hero_title">Web, App Development</span> <span class="span-2"
+                        data-lang="development_page_span-hero">That Drives Growth</span></h1>
                 <p data-lang="development_page_hero_desc">
                     Build modern, scalable, and user-friendly websites and mobile apps that help your business stand
                     out.
@@ -168,61 +177,79 @@
     <section class="pricing section reveal">
         <div class="container">
             <div class="section-header">
-                <p class="kicker" data-lang="development_page_pricing_subtitle">Transparent, scalable plans designed to
-                    fit your
-                    project needs.</p>
-                <h2 data-lang="development_page_pricing_title">Web Development Packages</h2>
+                <p class="kicker" data-lang="development_page_pricing_subtitle">
+                    Transparent, scalable plans designed to fit your project needs.
+                </p>
+                <h2 data-lang="development_page_pricing_title">
+                    Web Development Packages
+                </h2>
             </div>
 
             <div class="pricing-grid">
-                <div class="pricing-card">
-                    <div class="section-header">
-                        <h3>BASIC</h3>
-                        <p class="kicker">For small websites & startups</p>
+                <!-- BASIC -->
+                <div class="pricing-card" data-lang="pricing_basic_card">
+                    <div class="section-header-pricing">
+                        <h3 data-lang="pricing_basic_title">BASIC</h3>
+                        <p class="kicker" data-lang="pricing_basic_subtitle">For small websites & startups</p>
                     </div>
                     <ul class="features">
-                        <li><i class="fa-solid fa-check"></i> 3 Pages Website</li>
-                        <li><i class="fa-solid fa-check"></i> Responsive Design</li>
-                        <li><i class="fa-solid fa-check"></i> Contact Form Integration</li>
-                        <li><i class="fa-solid fa-check"></i> Basic SEO Setup</li>
+                        <li><i class="fa-solid fa-check"></i> <span data-lang="pricing_basic_feature_1">3 Pages
+                                Website</span></li>
+                        <li><i class="fa-solid fa-check"></i> <span data-lang="pricing_basic_feature_2">Responsive
+                                Design</span></li>
+                        <li><i class="fa-solid fa-check"></i> <span data-lang="pricing_basic_feature_3">Contact Form
+                                Integration</span></li>
+                        <li><i class="fa-solid fa-check"></i> <span data-lang="pricing_basic_feature_4">Basic SEO
+                                Setup</span></li>
                     </ul>
                     <a href="https://wa.me/201109458208?text=I'm%20interested%20in%20the%20BASIC%20Web%20Development%20Package"
-                        target="_blank" class="btn btn-whatsapp">
-                        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                        target="_blank" class="btn btn-whatsapp" data-lang="pricing_basic_button">
+                        <i class="fab fa-whatsapp"></i> <span data-lang="pricing_basic_button">Chat on WhatsApp</span>
                     </a>
                 </div>
 
-                <div class="pricing-card featured">
-                    <div class="section-header">
-                        <h3>PRO</h3>
-                        <p class="kicker">For growing businesses</p>
+                <!-- PRO -->
+                <div class="pricing-card featured" data-lang="pricing_pro_card">
+                    <div class="section-header-pricing">
+                        <h3 data-lang="pricing_pro_title">PRO</h3>
+                        <p class="kicker" data-lang="pricing_pro_subtitle">For growing businesses</p>
                     </div>
                     <ul class="features">
-                        <li><i class="fa-solid fa-check"></i> Up to 10 Pages</li>
-                        <li><i class="fa-solid fa-check"></i> E-commerce Integration</li>
-                        <li><i class="fa-solid fa-check"></i> CMS (WordPress or Custom)</li>
-                        <li><i class="fa-solid fa-check"></i> Advanced SEO & Analytics</li>
+                        <li><i class="fa-solid fa-check"></i> <span data-lang="pricing_pro_feature_1">Up to 10
+                                Pages</span></li>
+                        <li><i class="fa-solid fa-check"></i> <span data-lang="pricing_pro_feature_2">E-commerce
+                                Integration</span></li>
+                        <li><i class="fa-solid fa-check"></i> <span data-lang="pricing_pro_feature_3">CMS (WordPress or
+                                Custom)</span></li>
+                        <li><i class="fa-solid fa-check"></i> <span data-lang="pricing_pro_feature_4">Advanced SEO &
+                                Analytics</span></li>
                     </ul>
                     <a href="https://wa.me/201109458208?text=I'm%20interested%20in%20the%20PRO%20Web%20Development%20Package"
-                        target="_blank" class="btn btn-whatsapp">
-                        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                        target="_blank" class="btn btn-whatsapp" data-lang="pricing_pro_button">
+                        <i class="fab fa-whatsapp"></i> <span data-lang="pricing_pro_button">Chat on WhatsApp</span>
                     </a>
                 </div>
 
-                <div class="pricing-card">
-                    <div class="section-header">
-                        <h3>ENTERPRISE</h3>
-                        <p class="kicker">For large-scale systems</p>
+                <!-- ENTERPRISE -->
+                <div class="pricing-card" data-lang="pricing_enterprise_card">
+                    <div class="section-header-pricing">
+                        <h3 data-lang="pricing_enterprise_title">ENTERPRISE</h3>
+                        <p class="kicker" data-lang="pricing_enterprise_subtitle">For large-scale systems</p>
                     </div>
                     <ul class="features">
-                        <li><i class="fa-solid fa-check"></i> Custom Web & App Solutions</li>
-                        <li><i class="fa-solid fa-check"></i> API Integrations</li>
-                        <li><i class="fa-solid fa-check"></i> UI/UX Design System</li>
-                        <li><i class="fa-solid fa-check"></i> 24/7 Support & Maintenance</li>
+                        <li><i class="fa-solid fa-check"></i> <span data-lang="pricing_enterprise_feature_1">Custom Web
+                                & App Solutions</span></li>
+                        <li><i class="fa-solid fa-check"></i> <span data-lang="pricing_enterprise_feature_2">API
+                                Integrations</span></li>
+                        <li><i class="fa-solid fa-check"></i> <span data-lang="pricing_enterprise_feature_3">UI/UX
+                                Design System</span></li>
+                        <li><i class="fa-solid fa-check"></i> <span data-lang="pricing_enterprise_feature_4">24/7
+                                Support & Maintenance</span></li>
                     </ul>
                     <a href="https://wa.me/201109458208?text=I'm%20interested%20in%20the%20ENTERPRISE%20Web%20Development%20Package"
-                        target="_blank" class="btn btn-whatsapp">
-                        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                        target="_blank" class="btn btn-whatsapp" data-lang="pricing_enterprise_button">
+                        <i class="fab fa-whatsapp"></i> <span data-lang="pricing_enterprise_button">Chat on
+                            WhatsApp</span>
                     </a>
                 </div>
             </div>
