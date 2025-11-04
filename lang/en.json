@@ -144,7 +144,8 @@
   "contact_map_subtitle": "Our Office Location",
   
   "meta-markting": "Digital Marketing | Global Nexus",
-  "marketing_page_hero_title": "Digital Marketing That Converts",
+  "marketing_page_hero_title": "Digital Marketing",
+  "marketing_page_span-hero": "That Converts",
   "marketing_page_hero_desc": "Boost your online presence and connect with your audience through creative, data-driven campaigns that deliver real results.",
   "marketing_page_hero_cta": "Get a Free Consultation 🚀",
   
@@ -190,7 +191,8 @@
 
   "meta_development": "Web App Development | Global Nexus",
 
-  "development_page_hero_title": "Web & App Development That Performs",
+  "development_page_hero_title": "Web, App Development",
+  "development_page_span-hero": "Towards Business Leadership",
   "development_page_hero_desc": "We design and develop responsive, lightning-fast websites and mobile apps tailored to your business goals.",
   "development_page_hero_cta": "Build Your Next Project 🚀",
 
@@ -240,7 +242,8 @@
 
   "meta-branding": "Creative & Branding | Global Nexus",
 
-  "branding_page_hero_title": "Creative & Branding Solutions",
+  "branding_page_hero_title": "Creative, Branding",
+  "branding_page_span-hero": "Solutions",
   "branding_page_hero_desc": "We build powerful and authentic visual identities that set your business apart and connect emotionally with your target audience.",
   "branding_page_hero_cta": "Start Your Branding Journey 🎨",
   
