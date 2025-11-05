@@ -250,12 +250,17 @@ function renderBlogDetails(blogs, lang) {
 
     blogDetailSection.innerHTML = `
 <div class="blog-detail-card">
-<h2 class="blog-title">${title}</h2>
-<p class="blog-date">${blog.date}</p>
-        <img src="${getPath(blog.image)}" alt="${title}" class="blog-image">
-<p class="blog-content">${content}</p>
-<a href="blog.html" class="btn btn-primary back-btn" data-lang="blog_back">← Back to Blog</a>
-</div>
+    <div class="blog-image-wrapper">
+      <img src="${getPath(blog.image)}" alt="${title}" class="blog-image">
+    </div>
+
+    <div class="blog-content-wrapper">
+      <p class="blog-date">${blog.date}</p>
+      <h2 class="blog-title">${title}</h2>
+      <div class="blog-content">${content}</div>
+      <a href="blog.html" class="back-btn" data-lang="blog_back">← العودة إلى المدونة</a>
+    </div>
+  </div>
 `;
     setTimeout(() => loadLanguage(currentLang), 50);
   } else {
@@ -288,16 +293,31 @@ if (currentTheme === "dark") {
 themeToggles.forEach(btn => {
   const isDark = document.body.classList.contains('dark-mode');
   updateThemeUI(isDark, btn);
-
   btn.setAttribute('role', 'button');
+});
 
+const overlay = document.getElementById("theme-overlay");
+const icon = overlay.querySelector(".theme-icon");
+
+themeToggles.forEach(btn => {
   btn.addEventListener("click", () => {
-    document.body.classList.toggle("dark-mode");
-    const isDarkNow = document.body.classList.contains("dark-mode");
+    const isCurrentlyDark = document.body.classList.contains("dark-mode");
 
-    themeToggles.forEach(t => updateThemeUI(isDarkNow, t));
+    icon.className = `theme-icon fas ${isCurrentlyDark ? 'fa-sun' : 'fa-moon'}`;
 
-    localStorage.setItem("theme", isDarkNow ? "dark" : "light");
+    overlay.classList.add("active");
+
+    setTimeout(() => {
+      document.body.classList.toggle("dark-mode");
+
+      const isDarkNow = document.body.classList.contains("dark-mode");
+      themeToggles.forEach(t => updateThemeUI(isDarkNow, t));
+      localStorage.setItem("theme", isDarkNow ? "dark" : "light");
+    }, 150);
+
+    setTimeout(() => {
+      overlay.classList.remove("active");
+    }, 800);
   });
 
   btn.addEventListener('keydown', (e) => {
@@ -307,6 +327,6 @@ themeToggles.forEach(btn => {
     }
   });
 });
-
+ 
 
 
