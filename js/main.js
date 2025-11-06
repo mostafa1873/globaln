@@ -246,10 +246,18 @@ function renderBlogDetails(blogs, lang) {
   if (blog) {
     const currentLang = localStorage.getItem("lang") || "en";
     const title = currentLang === 'ar' && blog.title_ar ? blog.title_ar : blog.title_en;
-    const content = currentLang === 'ar' && blog.content_ar ? blog.content_ar : blog.content_en;
+    const mainTitle =
+      currentLang === 'ar' && blog.mainTitle_ar
+        ? blog.mainTitle_ar
+        : blog.mainTitle_en;
+
+    const subSections =
+      currentLang === 'ar' && blog.subSections_ar
+        ? blog.subSections_ar
+        : blog.subSections_en;
 
     blogDetailSection.innerHTML = `
-<div class="blog-detail-card">
+  <div class="blog-detail-card">
     <div class="blog-image-wrapper">
       <img src="${getPath(blog.image)}" alt="${title}" class="blog-image">
     </div>
@@ -257,11 +265,26 @@ function renderBlogDetails(blogs, lang) {
     <div class="blog-content-wrapper">
       <p class="blog-date">${blog.date}</p>
       <h2 class="blog-title">${title}</h2>
-      <div class="blog-content">${content}</div>
+
+      <div class="blog-content">
+        <h3 class="main-blog-title">${mainTitle}</h3>
+
+        ${Array.isArray(subSections)
+        ? subSections.map(sub => `
+              <div class="blog-subsection">
+                <h4 class="blog-subtitle">${sub.subtitle}</h4>
+                <p class="blog-text">${sub.text}</p>
+              </div>
+            `).join('')
+        : ''
+      }
+      </div>
+
       <a href="blog.html" class="back-btn" data-lang="blog_back">← العودة إلى المدونة</a>
     </div>
   </div>
 `;
+
     setTimeout(() => loadLanguage(currentLang), 50);
   } else {
     const currentLang = localStorage.getItem("lang") || "en";
@@ -327,6 +350,16 @@ themeToggles.forEach(btn => {
     }
   });
 });
- 
+
+
+// OVERLAY
+
+window.addEventListener("load", () => {
+    const overlay = document.getElementById("page-overlay");
+    overlay.classList.add("hidden");
+    setTimeout(() => {
+      overlay.style.display = "none";
+    }, 800);
+  });
 
 
