@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <title data-lang="meta-home">جلوبال نيكسس | وكالة تسويق رقمي وتطوير ويب</title>
+  <meta name="description"
+    content="جلوبال نيكسس هي شركة حديثة للتسويق الرقمي وتطوير الويب تساعد الشركات على النمو باستراتيجيات قوية عبر الإنترنت، ومواقع ويب، وعلامات تجارية." />
+
+  <meta name="keywords"
+    content="جلوبال نيكسس, تسويق رقمي, تطوير ويب, تحسين محركات البحث, علامات تجارية, تصميم مواقع, وكالة تسويق, مصر, الإسكندرية, البحيرة" />
+
+  <meta name="author" content="جلوبال نيكسس" />
+
+  <meta name="robots" content="index, follow" />
+
+  <!-- النسخة العربية -->
+  <link rel="canonical" href="https://www.globalnexus.com/ar/" />
+  <link rel="alternate" href="https://www.globalnexus.com/" hreflang="en" />
+  <link rel="alternate" href="https://www.globalnexus.com/ar/" hreflang="ar" />
+
+  <meta property="og:title" content="جلوبال نيكسس | التسويق الرقمي وتطوير الويب" />
+  <meta property="og:description" content="تمكين علامتك التجارية من خلال التسويق الإبداعي وحلول الويب." />
+  <meta property="og:image" content="https://www.globalnexus.com/images/preview.jpg" />
+  <meta property="og:url" content="https://www.globalnexus.com/" />
+  <meta property="og:type" content="website" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="جلوبال نيكسس | التسويق الرقمي وتطوير الويب" />
+  <meta name="twitter:description" content="تمكين علامتك التجارية من خلال التسويق الإبداعي وحلول الويب." />
+  <meta name="twitter:image" content="https://www.globalnexus.com/images/preview.jpg" />
+
+  <link rel="icon" href="../img/titlelogo.webp" type="image/webp" />
+  <link rel="preload" href="../css/all.min.css" as="style" onload="this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="../css/all.min.css">
+  </noscript>
+
+  <link rel="preload" href="../css/style.css" as="style" onload="this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="../css/style.css">
+  </noscript>
+
+
+</head>
+
+<body>
+
+  <div id="page-overlay">
+    <div class="overlay-content">
+      <img src="../img/titlelogo.webp" alt="الشعار" class="overlay-logo" />
+    </div>
+  </div>
+
+
+  <header class="header" id="navbar">
+    <div class="nav-wrapper">
+      <nav class="nav-content">
+        <div class="logo"><img id="logo" style="width: 80%;" src="../img/header.svg"
+            alt="وكالة جلوبال نيكسس للتسويق الرقمي"></div>
+
+        <ul class="nav-right nav-list">
+          <li><a href="index.html" data-lang="nav_home">الرئيسية</a></li>
+          <li><a href="#about" data-lang="nav_about">من نحن</a></li>
+          <li><a href="#services" data-lang="nav_services">الخدمات</a></li>
+          <li><a href="#projects" data-lang="nav_projects">المشاريع</a></li>
+          <li><a href="page/blog.html" data-lang="nav_blog">المدونة</a></li>
+          <li><a href="page/contact.html" data-lang="nav_contact">اتصل بنا</a></li>
+
+          <button id="theme-toggle" class="theme-toggle" aria-label="تبديل الوضع الداكن/الفاتح">
+            <i class="fas fa-moon"></i>
+          </button>
+
+          <li class="lang-dropdown">
+            <button id="langBtn" class="lang-btn" data-lang="nav_lang_english">English</button>
+            <ul class="lang-menu" id="langMenu">
+              <li data-lang-option="en" data-lang="nav_lang_english">English</li>
+              <li data-lang-option="ar" data-lang="nav_lang_arabic">عربي</li>
+            </ul>
+          </li>
+        </ul>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="فتح القائمة">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+
+      <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+        <li><a href="index.html" data-lang="nav_home">الرئيسية</a></li>
+        <li><a href="#about" data-lang="nav_about">من نحن</a></li>
+        <li><a href="#services" data-lang="nav_services">الخدمات</a></li>
+        <li><a href="#projects" data-lang="nav_projects">المشاريع</a></li>
+        <li><a href="page/blog.html" data-lang="nav_blog">المدونة</a></li>
+        <li><a href="page/contact.html" data-lang="nav_contact">اتصل بنا</a></li>
+
+        <button style="margin-bottom: 20px;" id="theme-toggle" class="theme-toggle"
+          aria-label="تبديل الوضع الداكن/الفاتح">
+          <i class="fas fa-moon"></i>
+        </button>
+
+        <li class="lang-dropdown mobile-lang">
+          <button id="langBtnMobile" class="lang-btn" data-lang="nav_lang_english">English</button>
+          <ul class="lang-menu" id="langMenuMobile">
+            <li data-lang-option="en" data-lang="nav_lang_english">English</li>
+            <li data-lang-option="ar" data-lang="nav_lang_arabic">عربي</li>
+          </ul>
+        </li>
+
+      </div>
+    </div>
+  </header>
+
+
+  <section class="hero clouds-hero curved" id="home">
+    <div class="container hero-inner">
+      <div class="hero-left reveal">
+        <h1 class="hero-title" data-lang="hero_title">وكالة تسويق رقمي</h1>
+        <p class="hero-desc" data-lang="hero_desc">
+          في جلوبال نيكسس، نجمع بين التسويق الرقمي وتطوير الويب لمساعدة العلامات التجارية على الوصول إلى جمهورها، تعزيز
+          رؤيتها، وتحقيق نتائج حقيقية.
+        </p>
+        <div class="hero-cta">
+          <a href="page/contact.html" class="btn btn-primary" data-lang="hero_cta_book_call">احجز مكالمة</a>
+          <a href="#projects" class="btn btn-outline" data-lang="hero_cta_see_work">اطلع على أعمالنا</a>
+        </div>
+
+        <div class="trusted">
+          <div class="logos">
+
+            <div class="logo-placeholder"><a href="https://www.facebook.com/share/16bYkT25VL" target="_blank"
+                aria-label="فيسبوك" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+              </a></div>
+
+            <div class="logo-placeholder"> <a href="https://www.instagram.com/globalnexus_eg?igsh=MWp5emNjaXdlb2g0cg"
+                target="_blank" aria-label="انستغرام" class="social-icon">
+                <i class="fab fa-instagram"></i>
+              </a></div>
+
+            <div class="logo-placeholder"><a href="https://x.com/Globa1Nexus?t=7w5iYV0HQBR-VBeJr-FGfg&s=08"
+                target="_blank" aria-label="تويتر/إكس" class="social-icon">
+                <i class="fab fa-x-twitter"></i>
+              </a>
+            </div>
+
+            <div class="logo-placeholder"><a
+                href="https://www.tiktok.com/@global.nexus5?is_from_webapp=1&sender_device=pc" target="_blank"
+                aria-label="تيك توك" class="social-icon">
+                <i class="fab fa-tiktok"></i>
+              </a>
+            </div>
+
+            <div class="logo-placeholder"><a href="https://www.linkedin.com/company/globalnexus-eg/?viewAsMember=true"
+                target="_blank" aria-label="لينكد إن" class="social-icon">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-right reveal">
+        <div class="mockup">
+          <picture>
+            <source srcset="img/markt-hero-404.webp" media="(max-width: 480px)">
+            <source srcset="img/markt-hero-504.webp" media="(max-width: 768px)">
+            <img src="../img/markt-hero.webp" alt="وكالة تسويق رقمي" width="630" height="420" fetchpriority="high"
+              decoding="async" style="max-width:100%;height:auto;">
+          </picture>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="clouds" aria-hidden="true">
+      <div class="cloud cloud--one"></div>
+      <div class="cloud cloud--two"></div>
+      <div class="cloud cloud--three"></div>
+    </div>
+  </section>
+
+
+  <section id="about" class="section reveal">
+    <div class="container">
+      <div class="section-header">
+        <p class="kicker" data-lang="about_title">من نحن</p>
+        <h2 data-lang="about_subtitle">تعرف علينا</h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-card card">
+          <h3 data-lang="about_card_title">جلوبال نيكسس — شريكك الرقمي</h3>
+          <p data-lang="about_card_desc">
+            نحن نجمع بين استراتيجية التسويق، التصميم الإبداعي، وتطوير الويب الحديث لمساعدة العلامات التجارية على النمو.
+            من الفكرة إلى التنفيذ — نبني تجارب رقمية قابلة للقياس تزيد من الرؤية والمشاركة والإيرادات.
+          </p>
+
+          <ul class="about-list">
+            <li><strong data-lang="about_strategy_title">الاستراتيجية أولاً</strong> — <span
+                data-lang="about_strategy_desc">حملات تعتمد على البيانات وتحقق التحويل فعليًا.</span></li>
+            <li><strong data-lang="about_quality_title">جودة المنتج</strong> — <span
+                data-lang="about_quality_desc">مواقع ويب حديثة وأتمتة قابلة للتوسع.</span></li>
+            <li><strong data-lang="about_support_title">الدعم</strong> — <span data-lang="about_support_desc">تحسين
+                مستمر وتتبع الأداء.</span></li>
+          </ul>
+
+          <div class="about-cta">
+            <a href="#contact" class="btn btn-primary" data-lang="about_cta_work">اعمل معنا</a>
+            <a href="#projects" class="btn btn-outline" data-lang="about_cta_portfolio">اطلع على معرض الأعمال</a>
+          </div>
+        </div>
+
+        <div class="about-stats">
+          <div class="stat">
+            <div class="stat-value" data-lang="about_stat_startups">الشركات الناشئة والشركات الصغيرة والمتوسطة</div>
+            <div class="stat-label" data-lang="about_stat_startups_desc">نساعد الفرق الصغيرة على التوسع</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value" data-lang="about_stat_stack">تسويق + تطوير</div>
+            <div class="stat-label" data-lang="about_stat_stack_desc">خدمات رقمية متكاملة</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value" data-lang="about_stat_performance">التركيز على الأداء</div>
+            <div class="stat-label" data-lang="about_stat_performance_desc">عمل مدفوع بمؤشرات الأداء الرئيسية وعائد
+              الاستثمار</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="services" class="section reveal">
+    <div class="container">
+      <div class="section-header">
+        <p class="kicker" data-lang="services_title">الخدمات</p>
+        <h2 data-lang="services_subtitle">ماذا نقدم</h2>
+      </div>
+
+      <div class="services-main-grid">
+
+        <div class="service-main-card reveal">
+          <div class="service-icon">
+            <i class="fas fa-bullhorn"></i>
+          </div>
+          <h3 data-lang="service_digital_main_title">التسويق الرقمي</h3>
+          <p data-lang="service_digital_main_desc">استراتيجيات تسويق ذكية لمساعدتك في الوصول إلى العملاء والنمو
+            عبر الإنترنت بنتائج قابلة للقياس.</p>
+          <div class="service-features">
+            <span data-lang="service_digital_feat1">تسويق عبر وسائل التواصل الاجتماعي</span>
+            <span data-lang="service_digital_feat2">إعلانات جوجل و الدفع مقابل النقر (PPC)</span>
+            <span data-lang="service_digital_feat3">تحسين محركات البحث (SEO)</span>
+            <span data-lang="service_digital_feat4">التسويق عبر البريد الإلكتروني</span>
+            <span data-lang="service_digital_feat5">إنشاء المحتوى</span>
+          </div>
+          <a href="page/marketing.html" class="btn btn-primary" data-lang="service_digital_cta">ابدأ حملتك 🚀</a>
+        </div>
+
+        <div class="service-main-card reveal">
+          <div class="service-icon">
+            <i class="fas fa-code"></i>
+          </div>
+          <h3 data-lang="service_web_main_title">تطوير الويب والتطبيقات</h3>
+          <p data-lang="service_web_main_desc">مواقع وتطبيقات مصممة للإبهار والتحويل — لأن التصميم مهم، ولكن الأداء
+            أهم.</p>
+          <div class="service-features">
+            <span data-lang="service_web_feat1">تصميم وتطوير مواقع الويب</span>
+            <span data-lang="service_web_feat2">حلول التجارة الإلكترونية</span>
+            <span data-lang="service_web_feat3">تطوير تطبيقات الجوال</span>
+            <span data-lang="service_web_feat4">تصميم واجهة وتجربة المستخدم (UI/UX)</span>
+            <span data-lang="service_web_feat5">صيانة واستضافة الويب</span>
+          </div>
+          <a href="page/development.html" class="btn btn-primary" data-lang="service_web_cta">احجز استشارة مجانية
+            💻</a>
+        </div>
+
+        <div class="service-main-card reveal">
+          <div class="service-icon">
+            <i class="fas fa-cogs"></i>
+          </div>
+          <h3 data-lang="service_business_main_title">حلول الأعمال</h3>
+          <p data-lang="service_business_main_desc">أدوات ذكية لإدارة وتحسين أداء شركتك بسهولة.</p>
+          <div class="service-features">
+            <span data-lang="service_business_feat1">أنظمة إدارة علاقات العملاء (CRM)</span>
+            <span data-lang="service_business_feat2">أنظمة تخطيط موارد المؤسسات (ERP)</span>
+            <span data-lang="service_business_feat3">الأتمتة والذكاء الاصطناعي</span>
+            <span data-lang="service_business_feat4">إدارة البيانات</span>
+            <span data-lang="service_business_feat5">استشارات فنية</span>
+          </div>
+          <a href="page/business.html" class="btn btn-primary" data-lang="service_business_cta">طور أنظمتك 🧠</a>
+        </div>
+
+        <div class="service-main-card reveal">
+          <div class="service-icon">
+            <i class="fas fa-paint-brush"></i>
+          </div>
+          <h3 data-lang="service_creative_main_title">الإبداع والعلامات التجارية</h3>
+          <p data-lang="service_creative_main_desc">من الفكرة إلى الهوية البصرية — نصنع صورة علامة تجارية تبني الثقة.
+          </p>
+          <div class="service-features">
+            <span data-lang="service_creative_feat1">تصميم الشعارات</span>
+            <span data-lang="service_creative_feat2">تصميم الهوية البصرية</span>
+            <span data-lang="service_creative_feat3">تصميم التغليف</span>
+            <span data-lang="service_creative_feat4">رسومات الحركة (موشن جرافيك)</span>
+            <span data-lang="service_creative_feat5">التصوير الفوتوغرافي</span>
+          </div>
+          <a href="page/branding.html" class="btn btn-primary" data-lang="service_creative_cta">ابنِ علامتك التجارية
+            ✨</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="testimonials section reveal">
+    <div class="container">
+      <div class="section-header">
+        <p class="kicker" data-lang="vision_subtitle">تمكين العلامات التجارية من خلال الابتكار الرقمي</p>
+        <h2 class="" data-lang="vision_title">رؤيتنا</h2>
+      </div>
+
+      <div class="testimonial-grid">
+        <div class="testimonial">
+          <p data-lang="vision_quote1">"نؤمن بأن الإبداع والتكنولوجيا يجب أن يعملا معًا. هدفنا هو مساعدة الشركات على
+            النمو من خلال إنشاء حلول رقمية ذكية وفعالة — بدءًا من استراتيجيات التسويق وصولاً إلى المواقع الحديثة."</p>
+          <div class="testimonial-author">
+            <cite data-lang="vision_author">— فريق جلوبال نيكسس</cite>
+          </div>
+        </div>
+        <div class="testimonial">
+          <p data-lang="vision_quote2">"نحن هنا لتحويل الأفكار إلى نجاح حقيقي عبر الإنترنت يربط، يلهم، ويحدث فرقًا.
+            مهمتنا هي سد الفجوة بين الإبداع والتكنولوجيا — مساعدة كل علامة تجارية على سرد قصتها بطريقة مميزة حقًا."</p>
+          <div class="testimonial-author">
+            <cite data-lang="vision_author">— فريق جلوبال نيكسس</cite>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="process section reveal">
+    <div class="container">
+
+      <div class="section-header">
+        <h2 data-lang="process_title">نحوّل استثمارك إلى عائد مالي مضمون</h2>
+        <p class="kicker" data-lang="process_subtitle">خطوات مدروسة تعتمد على أرقام حقيقية لتنمية عملك بشكل أسرع وأكثر
+          ذكاءً. نعمل بدقة على ما يحقق لك المال، ونقيس النتائج أمامك مباشرة.</p>
+      </div>
+
+      <div class="process-steps">
+        <div class="step">
+          <div class="step-number" data-lang="process_step1_num">01</div>
+          <h3 data-lang="process_step1_title">إعداد الخطة</h3>
+          <p data-lang="process_step1_desc">نبدأ بفحص موقعك الإلكتروني، منافسيك، واحتياجات عملائك. نحدد أي فرص ضائعة
+            ونطور خطة تنفيذ دقيقة لضمان أفضل النتائج من اليوم الأول.</p>
+        </div>
+        <div class="step">
+          <div class="step-number" data-lang="process_step2_num">02</div>
+          <h3 data-lang="process_step2_title">تنفيذ حملات تحقق المبيعات</h3>
+          <p data-lang="process_step2_desc">يجهز فريقنا ويدير حملات موجهة للتحويل (SEO، إعلانات، محتوى) مصممة خصيصًا
+            لأهداف إيراداتك، مما يضمن اختراقًا سريعًا للسوق بأقل تكلفة.</p>
+        </div>
+        <div class="step">
+          <div class="step-number" data-lang="process_step3_num">03</div>
+          <h3 data-lang="process_step3_title">المتابعة وتحسين الأداء</h3>
+          <p data-lang="process_step3_desc">عملنا لا يتوقف بعد الإطلاق. نراقب الحملات في الوقت الفعلي ونعدل الميزانيات
+            والاستراتيجيات بناءً على اتجاهات السوق لضمان حصول أموالك دائمًا على أفضل عائد.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="projects" class="section alt reveal">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="kicker" data-lang="projects_title">المشاريع</p>
+        <h2 data-lang="projects_subtitle">أحدث أعمالنا</h2>
+      </div>
+
+      <div class="projects-grid">
+        <div class="project-card reveal">
+          <a href="https://mostafa1873.github.io/ezz/" target="_blank">
+            <img loading="lazy" src="../img/project1.webp" alt="مشروع عز للتجارة">
+          </a>
+          <h4 data-lang="projects_project1">عز للتجارة</h4>
+          <p class="muted" data-lang="projects_project1_date">2025 • تصدير</p>
+        </div>
+
+        <div class="project-card reveal">
+          <a href="https://agropower.site/" target="_blank">
+            <img loading="lazy" src="../img/project2.webp" alt="مشروع أجرو جرين">
+          </a>
+          <h4 data-lang="projects_project2">أجرو جرين</h4>
+          <p class="muted" data-lang="projects_project2_date">2025 • تصدير</p>
+        </div>
+
+        <div class="project-card reveal">
+          <a href="https://www.greenpower-eg.com/index.html" target="_blank">
+            <img loading="lazy" src="../img/project3.webp" alt="مشروع جرين باور">
+          </a>
+          <h4 data-lang="projects_project3">جرين باور</h4>
+          <p class="muted" data-lang="projects_project3_date">2024 • تصدير</p>
+        </div>
+      </div>
+
+      <div class="projects-divider reveal">
+
+        <h3 data-lang="projects_branding_section">العلامات التجارية، وسائل التواصل الاجتماعي</h3>
+
+      </div>
+
+      <div class="projects-grid">
+        <div class="project-card reveal">
+          <a href="https://www.behance.net/gallery/238057231/Green-Power" target="_blank">
+            <img loading="lazy" src="../img/brand_1.webp" alt="مشروع هوية العلامة التجارية">
+          </a>
+          <h4 data-lang="projects_branding1">هوية جرين باور</h4>
+          <p class="muted" data-lang="projects_branding1_date">2024 • تصميم هوية • وسائل تواصل اجتماعي</p>
+        </div>
+
+        <div class="project-card reveal">
+          <a href="https://www.behance.net/gallery/238165185/EZZ" target="_blank">
+            <img loading="lazy" src="../img/brand-2.webp" alt="حملة وسائل التواصل الاجتماعي">
+          </a>
+          <h4 data-lang="projects_branding2">هوية عز التجارية</h4>
+          <p class="muted" data-lang="projects_branding2_date">2025 • وسائل تواصل اجتماعي</p>
+        </div>
+
+        <div class="project-card reveal">
+          <a href="img/social3-full.jpg" target="_blank">
+            <img loading="lazy" src="../img/brand_3_.webp" alt="مشروع تصميم شعار">
+          </a>
+          <h4 data-lang="projects_branding3">هوية المكة التجارية</h4>
+          <p class="muted" data-lang="projects_branding3_date">2025 • تصميم هوية • وسائل تواصل اجتماعي</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <div class="floating-buttons">
+    <a href="https://wa.me/201109458238" target="_blank" class="floating-btn whatsapp" aria-label="واتساب">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <button class="floating-btn top" aria-label="العودة للأعلى" onclick="scrollToTop()">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+  </div>
+
+
+  <footer class="footer">
+    <div class="container footer-inner">
+
+      <div class="footer-brand">
+        <h3>
+          <div><img id="logo" loading="lazy" src="../img/header.svg" alt="وكالة جلوبال نيكسس للتسويق الرقمي"></div>
+        </h3>
+        <p data-lang="footer_brand_desc">تمكين نموك الرقمي من خلال الابتكار وحلول الويب الذكية.</p>
+      </div>
+
+      <div class="footer-links">
+        <h4 data-lang="footer_links_title">روابط سريعة</h4>
+        <ul>
+          <li><a href="#about" data-lang="footer_links_about">من نحن</a></li>
+          <li><a href="#services" data-lang="footer_links_services">الخدمات</a></li>
+          <li><a href="#projects" data-lang="footer_links_projects">المشاريع</a></li>
+          <li><a href="#contact" data-lang="footer_links_contact">اتصل بنا</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h4 data-lang="footer_contact_title">للتواصل والمتابعة</h4>
+        <div class="contact-actions">
+          <a href="mailto:hello@globalnexus.example" class="btn btn-outline" data-lang="footer_contact_email">أرسل لنا
+            بريدًا إلكترونيًا</a>
+        </div>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/share/16bYkT25VL"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/globalnexus_eg?igsh=MWp5emNjaXdlb2g0cg"><i
+              class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/globalnexus-eg/?viewAsMember=true"><i
+              class="fab fa-linkedin-in"></i></a>
+          <a href="https://x.com/Globa1Nexus?t=7w5iYV0HQBR-VBeJr-FGfg&s=08"><i class="fab fa-x-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© <span id="year"></span> <span data-lang="footer_copyright">جلوبال نيكسس. جميع الحقوق محفوظة.</span></p>
+    </div>
+  </footer>
+
+
+  <div id="theme-overlay" class="theme-overlay">
+    <i class="theme-icon fas fa-moon"></i>
+  </div>
+
+
+  <script src="../js/main.js" defer></script>
+
+</body>
+
+</html>

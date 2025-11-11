@@ -11,12 +11,6 @@ body {
   height: 100%;
 }
 
-@font-face {
-  font-family: 'Poppins';
-  src: url('https://fonts.gstatic.com/s/poppins/v20/pxiEyp8kv8JHgFVrFJA.woff2') format('woff2');
-  font-display: swap;
-}
-
 
 :root {
   --bg: #ffffff;
@@ -43,6 +37,54 @@ body {
 
 html {
   scroll-behavior: smooth;
+}
+
+/* poppins-300 - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 300;
+  src: url('../fonts/poppins-v24-latin-300.woff2') format('woff2');
+  ascent-override: 90%;
+  descent-override: 10%;
+  line-gap-override: 0%;
+}
+
+/* poppins-regular - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/poppins-v24-latin-regular.woff2') format('woff2');
+  ascent-override: 90%;
+  descent-override: 10%;
+  line-gap-override: 0%;
+}
+
+/* poppins-600 - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../fonts/poppins-v24-latin-600.woff2') format('woff2');
+  ascent-override: 90%;
+  descent-override: 10%;
+  line-gap-override: 0%;
+}
+
+/* poppins-700 - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/poppins-v24-latin-700.woff2') format('woff2');
+  ascent-override: 90%;
+  descent-override: 10%;
+  line-gap-override: 0%;
 }
 
 body {
@@ -3260,14 +3302,14 @@ body.dark-mode * {
   position: fixed;
   inset: 0;
   background: radial-gradient(circle at center, #1e293b, #000);
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
-  z-index: 9999;
-  opacity: 0;
+  z-index: 99999;
+  opacity: -10000;
   pointer-events: none;
   transform: scale(1.1);
-  transition: opacity 0.5s ease, transform 0.6s ease;
+  transition: all 0.5s ease, all 0.6s ease;
 }
 
 .theme-overlay.active {
@@ -3315,7 +3357,7 @@ body:not(.dark-mode) .theme-icon {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 9999;
+  z-index: 20000;
   transition: opacity 0.8s ease, visibility 0.8s ease;
 }
 

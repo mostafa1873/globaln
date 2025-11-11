@@ -13,22 +13,37 @@
         content="Global Nexus, blog, digital marketing, web development, article, SEO tips, branding" />
     <meta name="author" content="Global Nexus" />
     <meta name="robots" content="index, follow" />
+
     <link rel="canonical" href="https://www.globalnexus.com/blog/article-slug" />
+    <link rel="alternate" href="https://www.globalnexus.com/blog/article-slug" hreflang="en" />
+    <link rel="alternate" href="https://www.globalnexus.com/ar/blog/article-slug" hreflang="ar" />
+
+
     <meta property="og:title" content="Blog Title | Global Nexus" />
     <meta property="og:description" content="Explore this in-depth article from Global Nexus digital experts." />
     <meta property="og:image" content="https://www.globalnexus.com/images/blog/article-image.jpg" />
     <meta property="og:url" content="https://www.globalnexus.com/blog/article-slug" />
     <meta property="og:type" content="article" />
+
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Blog Title | Global Nexus" />
     <meta name="twitter:description" content="Explore this in-depth article from Global Nexus digital experts." />
     <meta name="twitter:image" content="https://www.globalnexus.com/images/blog/article-image.jpg" />
+
     <link rel="icon" href="../img/titlelogo.webp" loading="lazy" type="image/webp" />
     <!-- /META TAGS -->
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="../css/style.css" />
+    <!-- Font Awesome -->
+    <link rel="preload" href="../css/all.min.css" as="style" onload="this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="../css/all.min.css">
+    </noscript>
+
+    <!-- Main CSS -->
+    <link rel="preload" href="../css/style.css" as="style" onload="this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="../css/style.css">
+    </noscript>
 </head>
 
 <body>
@@ -204,7 +219,7 @@
     <!-- OVERLAY -->
 
 
-    <script src="../js/main.js"></script>
+    <script src="../js/main.js" defer></script>
 
 </body>
 

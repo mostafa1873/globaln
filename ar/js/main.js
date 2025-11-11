@@ -331,7 +331,7 @@ themeToggles.forEach(btn => {
       themeOverlay.classList.remove("active");
       setTimeout(() => {
         themeOverlay.style.display = "none";
-      }, 600);
+      }, 600); 
     }, 800);
   });
 });
@@ -345,5 +345,5 @@ window.addEventListener("load", () => {
   pageOverlay.classList.add("hidden");
   setTimeout(() => {
     pageOverlay.style.display = "none";
-  }, 2000);
+  }, 800);
 });

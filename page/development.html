@@ -39,11 +39,24 @@
     <link rel="icon" href="../img/titlelogo.webp" loading="lazy" type="image/webp" />
     <!-- /META TAGS -->
 
-    <!-- FONTS & STYLES -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/servicespage.css" />
+    <!-- Font Awesome -->
+    <link rel="preload" href="../css/all.min.css" as="style" onload="this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="../css/all.min.css">
+    </noscript>
+
+    <!-- Main CSS -->
+    <link rel="preload" href="../css/style.css" as="style" onload="this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="../css/style.css">
+    </noscript>
+
+    <!-- Services Page CSS -->
+    <link rel="preload" href="../css/servicespage.css" as="style" onload="this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="../css/servicespage.css">
+    </noscript>
+
 </head>
 
 <body>
@@ -223,7 +236,7 @@
                                 Setup</span></li>
                     </ul>
                     <a href="https://wa.me/201109458238?text=I'm%20interested%20in%20the%20BASIC%20Web%20Development%20Package"
-                        target="_blank" class="btn btn-whatsapp" data-lang="pricing_basic_button">
+                        target="_blank" class="btn btn-whatsapp">
                         <i class="fab fa-whatsapp"></i> <span data-lang="pricing_basic_button">Chat on WhatsApp</span>
                     </a>
                 </div>
@@ -245,7 +258,7 @@
                                 Analytics</span></li>
                     </ul>
                     <a href="https://wa.me/201109458238?text=I'm%20interested%20in%20the%20PRO%20Web%20Development%20Package"
-                        target="_blank" class="btn btn-whatsapp" data-lang="pricing_pro_button">
+                        target="_blank" class="btn btn-whatsapp">
                         <i class="fab fa-whatsapp"></i> <span data-lang="pricing_pro_button">Chat on WhatsApp</span>
                     </a>
                 </div>
@@ -267,7 +280,7 @@
                                 Support & Maintenance</span></li>
                     </ul>
                     <a href="https://wa.me/201109458238?text=I'm%20interested%20in%20the%20ENTERPRISE%20Web%20Development%20Package"
-                        target="_blank" class="btn btn-whatsapp" data-lang="pricing_enterprise_button">
+                        target="_blank" class="btn btn-whatsapp">
                         <i class="fab fa-whatsapp"></i> <span data-lang="pricing_enterprise_button">Chat on
                             WhatsApp</span>
                     </a>
@@ -349,7 +362,7 @@
     </div>
     <!-- OVERLAY -->
 
-    <script src="../js/main.js"></script>
+    <script src="../js/main.js" defer></script>
 
 </body>
 

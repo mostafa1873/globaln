@@ -22,6 +22,8 @@
 
     <!-- Canonical -->
     <link rel="canonical" href="https://www.globalnexus.com/blog" />
+    <link rel="alternate" href="https://www.globalnexus.com/blog" hreflang="en" />
+    <link rel="alternate" href="https://www.globalnexus.com/ar/page/blog.html" hreflang="ar" />
 
     <!-- Alternate Languages -->
     <link rel="alternate" href="https://www.globalnexus.com/blog" hreflang="en" />
@@ -45,10 +47,17 @@
     <!-- /META TAGS -->
 
 
+    <!-- Font Awesome -->
+    <link rel="preload" href="../css/all.min.css" as="style" onload="this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="../css/all.min.css">
+    </noscript>
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="../css/style.css" />
+    <!-- Main CSS -->
+    <link rel="preload" href="../css/style.css" as="style" onload="this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="../css/style.css">
+    </noscript>
 </head>
 
 <body>
@@ -229,7 +238,7 @@
     </div>
     <!-- OVERLAY -->
 
-    <script src="../js/main.js"></script>
+    <script src="../js/main.js" defer></script>
 
 </body>
 

@@ -1,0 +1,137 @@
+[
+  {
+    "id": 1,
+    "title_en": "AI Automation for Businesses",
+    "title_ar": "أتمتة الذكاء الاصطناعي للأعمال",
+    "date": "2025-10-25",
+    "image": "../img/blog_1.webp",
+    "mainTitle_en": "How AI Can Transform Business Operations",
+    "mainTitle_ar": "كيف يمكن للذكاء الاصطناعي تحويل عمليات الأعمال",
+    "subSections_en": [
+      {
+        "subtitle": "1. Automating Repetitive Tasks",
+        "text": "AI helps businesses save time by handling routine operations automatically."
+      },
+      {
+        "subtitle": "2. Enhancing Decision Making",
+        "text": "Data-driven AI tools provide insights that guide smarter business decisions."
+      },
+      {
+        "subtitle": "3. Reducing Operational Costs",
+        "text": "Automation minimizes human error and reduces costs across departments."
+      },
+      {
+        "subtitle": "4. Improving Customer Experience",
+        "text": "Chatbots and AI assistants offer faster, personalized support for clients."
+      }
+    ],
+    "subSections_ar": [
+      {
+        "subtitle": "1. أتمتة المهام المتكررة",
+        "text": "يساعد الذكاء الاصطناعي الشركات على توفير الوقت من خلال تنفيذ المهام الروتينية تلقائيًا."
+      },
+      {
+        "subtitle": "2. تحسين عملية اتخاذ القرار",
+        "text": "توفر أدوات الذكاء الاصطناعي المستندة إلى البيانات رؤى تساعد في اتخاذ قرارات أكثر ذكاءً."
+      },
+      {
+        "subtitle": "3. تقليل التكاليف التشغيلية",
+        "text": "يقلل الأتمتة من الأخطاء البشرية ويخفض التكاليف عبر الأقسام."
+      },
+      {
+        "subtitle": "4. تحسين تجربة العملاء",
+        "text": "تساعد روبوتات الدردشة والمساعدين الذكيين في تقديم دعم أسرع وأكثر تخصيصًا للعملاء."
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title_en": "Mobile App Development Trends",
+    "title_ar": "اتجاهات تطوير تطبيقات الجوال",
+    "date": "2025-09-12",
+    "image": "../img/blog_2.webp",
+    "mainTitle_en": "Top Mobile App Development Trends in 2025",
+    "mainTitle_ar": "أبرز اتجاهات تطوير تطبيقات الجوال في عام 2025",
+    "subSections_en": [
+      {
+        "subtitle": "1. AI Integration",
+        "text": "AI-driven features like voice recognition and personalization are becoming standard."
+      },
+      {
+        "subtitle": "2. Cross-Platform Development",
+        "text": "Frameworks like Flutter and React Native dominate for multi-platform support."
+      },
+      {
+        "subtitle": "3. 5G Technology Impact",
+        "text": "5G enables faster, more immersive mobile experiences with less latency."
+      },
+      {
+        "subtitle": "4. Focus on Security",
+        "text": "Developers are emphasizing stronger app security and data protection."
+      }
+    ],
+    "subSections_ar": [
+      {
+        "subtitle": "1. دمج الذكاء الاصطناعي",
+        "text": "أصبحت الميزات المعتمدة على الذكاء الاصطناعي مثل التعرف على الصوت والتخصيص معيارًا أساسيًا."
+      },
+      {
+        "subtitle": "2. التطوير عبر الأنظمة",
+        "text": "تتصدر أُطر العمل مثل Flutter و React Native مجال دعم الأنظمة المتعددة."
+      },
+      {
+        "subtitle": "3. تأثير تقنية الجيل الخامس 5G",
+        "text": "تمكّن تقنية 5G من تجارب هاتف أسرع وأكثر تفاعلية مع تأخير أقل."
+      },
+      {
+        "subtitle": "4. التركيز على الأمان",
+        "text": "يركز المطورون الآن بشكل أكبر على أمان التطبيقات وحماية البيانات."
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title_en": "Digital Marketing Strategies",
+    "title_ar": "استراتيجيات التسويق الرقمي",
+    "date": "2025-08-30",
+    "image": "../img/blog_3.webp",
+    "mainTitle_en": "Winning Digital Marketing Strategies for 2025",
+    "mainTitle_ar": "استراتيجيات ناجحة للتسويق الرقمي في عام 2025",
+    "subSections_en": [
+      {
+        "subtitle": "1. Content Personalization",
+        "text": "Tailoring marketing messages based on user behavior improves engagement."
+      },
+      {
+        "subtitle": "2. Social Media Automation",
+        "text": "Scheduling tools and AI-driven insights make social media marketing more efficient."
+      },
+      {
+        "subtitle": "3. Influencer Collaboration",
+        "text": "Partnering with niche influencers helps reach targeted audiences."
+      },
+      {
+        "subtitle": "4. Data-Driven Campaigns",
+        "text": "Analytics-based campaigns maximize ROI and refine marketing decisions."
+      }
+    ],
+    "subSections_ar": [
+      {
+        "subtitle": "1. تخصيص المحتوى",
+        "text": "يساعد تخصيص الرسائل التسويقية بناءً على سلوك المستخدم في زيادة التفاعل."
+      },
+      {
+        "subtitle": "2. أتمتة وسائل التواصل الاجتماعي",
+        "text": "تُسهم أدوات الجدولة والتحليلات الذكية في جعل التسويق عبر وسائل التواصل أكثر كفاءة."
+      },
+      {
+        "subtitle": "3. التعاون مع المؤثرين",
+        "text": "يتيح التعاون مع المؤثرين المتخصصين الوصول إلى جماهير أكثر استهدافًا."
+      },
+      {
+        "subtitle": "4. الحملات المعتمدة على البيانات",
+        "text": "تعزز الحملات المستندة إلى التحليلات العائد على الاستثمار وتساعد في تحسين القرارات التسويقية."
+      }
+    ]
+  }
+]

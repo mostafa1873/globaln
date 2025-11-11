@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
 
     <!-- META TAGS -->
-    <title data-lang="meta-branding">Creative & Branding | Global Nexus</title>
+    <title data-lang="meta-branding">Creative-Branding | Global Nexus</title>
     <meta name="description"
         content="We craft unique visual identities and strategies to build a memorable brand that resonates with your audience." />
     <meta name="keywords"
@@ -38,11 +38,24 @@
     <link rel="icon" href="../img/titlelogo.webp" loading="lazy" type="image/webp" />
     <!-- /META TAGS -->
 
-    <!-- FONTS & STYLES -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/servicespage.css" />
+    <!-- Font Awesome -->
+    <link rel="preload" href="../css/all.min.css" as="style" onload="this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="../css/all.min.css">
+    </noscript>
+
+    <!-- Main CSS -->
+    <link rel="preload" href="../css/style.css" as="style" onload="this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="../css/style.css">
+    </noscript>
+
+    <!-- Services Page CSS -->
+    <link rel="preload" href="../css/servicespage.css" as="style" onload="this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="../css/servicespage.css">
+    </noscript>
+
 </head>
 
 <body>
@@ -378,7 +391,7 @@
     </div>
     <!-- OVERLAY -->
 
-    <script src="../js/main.js"></script>
+    <script src="../js/main.js" defer></script>
 
 </body>
 

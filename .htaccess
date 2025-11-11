@@ -1,0 +1,34 @@
+# Enable Rewrite Engine
+RewriteEngine On
+
+# ------------------------
+# Remove .html from URLs
+# ------------------------
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([a-zA-Z0-9\-_]+)/?$ $1.html [L]
+
+# ------------------------
+# Arabic pages (under /ar/page/)
+# ------------------------
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ar/([a-zA-Z0-9\-_]+)/?$ ar/page/$1.html [L]
+
+# ------------------------
+# Blog details pretty URL
+# ------------------------
+# English
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^blog/([0-9]+)/?$ page/blogdetails.html?id=$1 [L,QSA]
+
+# Arabic
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ar/blog/([0-9]+)/?$ ar/page/blogdetails.html?id=$1 [L,QSA]
+
+# ------------------------
+# Custom 404 page
+# ------------------------
+ErrorDocument 404 /404.html

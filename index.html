@@ -20,8 +20,10 @@
   <!-- Robots -->
   <meta name="robots" content="index, follow" />
 
-  <!-- Canonical Link -->
+  <!-- النسخة الإنجليزية -->
   <link rel="canonical" href="https://www.globalnexus.com/" />
+  <link rel="alternate" href="https://www.globalnexus.com/" hreflang="en" />
+  <link rel="alternate" href="https://www.globalnexus.com/ar/" hreflang="ar" />
 
   <!-- Open Graph (Social Preview) -->
   <meta property="og:title" content="Global Nexus | Digital Marketing & Web Development" />
@@ -40,12 +42,19 @@
   <link rel="icon" href="img/titlelogo.webp" type="image/webp" />
   <!-- TAGS -->
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Font Awesome -->
+  <link rel="preload" href="css/all.min.css" as="style" onload="this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="css/all.min.css">
+  </noscript>
+
+  <!-- Main Style -->
   <link rel="preload" href="css/style.css" as="style" onload="this.rel='stylesheet'">
   <noscript>
     <link rel="stylesheet" href="css/style.css">
   </noscript>
+
 
 </head>
 
@@ -158,25 +167,26 @@
                 <i class="fab fa-facebook-f"></i>
               </a></div>
 
-            <div class="logo-placeholder"> <a href="https://www.instagram.com/globalnexus_eg?igsh=MWp5emNjaXdlb2g0cg" target="_blank"
-                aria-label="Instagram" class="social-icon">
+            <div class="logo-placeholder"> <a href="https://www.instagram.com/globalnexus_eg?igsh=MWp5emNjaXdlb2g0cg"
+                target="_blank" aria-label="Instagram" class="social-icon">
                 <i class="fab fa-instagram"></i>
               </a></div>
 
-            <div class="logo-placeholder"><a href="https://x.com/Globa1Nexus?t=7w5iYV0HQBR-VBeJr-FGfg&s=08" target="_blank" aria-label="Twitter/X"
-                class="social-icon">
+            <div class="logo-placeholder"><a href="https://x.com/Globa1Nexus?t=7w5iYV0HQBR-VBeJr-FGfg&s=08"
+                target="_blank" aria-label="Twitter/X" class="social-icon">
                 <i class="fab fa-x-twitter"></i>
               </a>
             </div>
 
-            <div class="logo-placeholder"><a href="https://www.tiktok.com/@global.nexus5?is_from_webapp=1&sender_device=pc" target="_blank" aria-label="tiktok"
-                class="social-icon">
+            <div class="logo-placeholder"><a
+                href="https://www.tiktok.com/@global.nexus5?is_from_webapp=1&sender_device=pc" target="_blank"
+                aria-label="tiktok" class="social-icon">
                 <i class="fab fa-tiktok"></i>
               </a>
             </div>
 
-            <div class="logo-placeholder"><a href="https://www.linkedin.com/company/globalnexus-eg/?viewAsMember=true" target="_blank" aria-label="linkedin"
-                class="social-icon">
+            <div class="logo-placeholder"><a href="https://www.linkedin.com/company/globalnexus-eg/?viewAsMember=true"
+                target="_blank" aria-label="linkedin" class="social-icon">
                 <i class="fab fa-linkedin-in"></i>
               </a>
             </div>
@@ -187,7 +197,16 @@
 
       <div class="hero-right reveal">
         <div class="mockup">
-          <img src="img/markt-hero.webp" alt="Digital Marketing Agency" fetchpriority="high" decoding="async">
+          <picture>
+            <!-- صورة أصغر للموبايل -->
+            <source srcset="img/markt-hero-404.webp" media="(max-width: 480px)">
+            <!-- نسخة متوسطة للأجهزة اللوحية -->
+            <source srcset="img/markt-hero-504.webp" media="(max-width: 768px)">
+            <!-- نسخة كبيرة للشاشات العادية -->
+            <img src="img/markt-hero.webp" alt="Digital Marketing Agency" width="630" height="420" fetchpriority="high"
+              decoding="async" style="max-width:100%;height:auto;">
+          </picture>
+
         </div>
       </div>
     </div>
@@ -539,8 +558,10 @@
         </div>
         <div class="social-icons">
           <a href="https://www.facebook.com/share/16bYkT25VL"><i class="fab fa-facebook-f"></i></a>
-          <a href="https://www.instagram.com/globalnexus_eg?igsh=MWp5emNjaXdlb2g0cg"><i class="fab fa-instagram"></i></a>
-          <a href="https://www.linkedin.com/company/globalnexus-eg/?viewAsMember=true"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.instagram.com/globalnexus_eg?igsh=MWp5emNjaXdlb2g0cg"><i
+              class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/globalnexus-eg/?viewAsMember=true"><i
+              class="fab fa-linkedin-in"></i></a>
           <a href="https://x.com/Globa1Nexus?t=7w5iYV0HQBR-VBeJr-FGfg&s=08"><i class="fab fa-x-twitter"></i></a>
         </div>
       </div>
