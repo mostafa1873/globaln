@@ -1,10 +1,18 @@
 // PATH HANDLER
 function getPath(filePath) {
-  const path = window.location.pathname;
-  if (path.includes('/page/')) {
-    return '../' + filePath;
-  }
-  return filePath;
+    // تحديد المسار الأساسي للمشروع (Base Directory Name)
+    const baseDirName = 'global-nexus';
+    // التحقق مما إذا كان المسار يحتوي على مجلد المشروع
+    const hasBaseDir = window.location.pathname.includes(`/${baseDirName}`);
+
+    // بناء المسار الأساسي: /global-nexus/ أو /
+    const basePath = hasBaseDir ? `/${baseDirName}/` : '/';
+
+    // تنظيف filePath من أي '/' في البداية لتجنب تكرار // في المسار
+    const cleanFilePath = filePath.startsWith('/') ? filePath.substring(1) : filePath;
+
+    // بناء المسار المطلق: /global-nexus/lang/ar.json
+    return basePath + cleanFilePath;
 }
 
 // Get current year for footer
@@ -13,17 +21,25 @@ document.getElementById('year').textContent = new Date().getFullYear();
 // Navbar scroll effect
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
-  if (window.scrollY > 80) {
-    navbar.classList.add('scrolled');
-  } else {
-    navbar.classList.remove('scrolled');
-  }
+    if (window.scrollY > 80) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
 });
 
 // BACK TO HOME
 function goToHome() {
-  const lang = typeof currentLang !== 'undefined' ? currentLang : localStorage.getItem('lang') || 'en';
-  window.location.href = lang === 'ar' ? '/ar/' : '/';
+    const lang = typeof currentLang !== 'undefined' ? currentLang : localStorage.getItem('lang') || 'en';
+
+    // تحديد المسار الأساسي للمشروع
+    const baseDirName = 'global-nexus';
+    const baseDir = window.location.pathname.includes(`/${baseDirName}`) ? `/${baseDirName}` : '';
+
+    // بناء المسار للصفحة الرئيسية
+    const homePath = lang === 'ar' ? `${baseDir}/ar/` : `${baseDir}/`;
+
+    window.location.href = homePath.replace(/\/{2,}/g, '/'); // إزالة أي // مكررة
 }
 
 // Logo click
@@ -32,10 +48,10 @@ if (logo) logo.addEventListener('click', goToHome);
 
 // Navbar Home links (desktop & mobile)
 document.querySelectorAll('.nav-home').forEach(link => {
-  link.addEventListener('click', e => {
-    e.preventDefault();
-    goToHome();
-  });
+    link.addEventListener('click', e => {
+        e.preventDefault();
+        goToHome();
+    });
 });
 
 // Mobile menu toggle
@@ -43,114 +59,152 @@ const menuToggle = document.getElementById('menuToggle');
 const mobileMenu = document.getElementById('mobileMenu');
 
 if (menuToggle && mobileMenu) {
-  menuToggle.addEventListener('click', () => {
-    menuToggle.classList.toggle('open');
-    mobileMenu.classList.toggle('active');
-  });
-
-  document.querySelectorAll('#mobileMenu a').forEach(link => {
-    link.addEventListener('click', () => {
-      mobileMenu.classList.remove('active');
-      menuToggle.classList.remove('open');
+    menuToggle.addEventListener('click', () => {
+        menuToggle.classList.toggle('open');
+        mobileMenu.classList.toggle('active');
     });
-  });
+
+    document.querySelectorAll('#mobileMenu a').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+            menuToggle.classList.remove('open');
+        });
+    });
 }
 
 // LANG HANDLING (URL-based)
 function getLangFromURL() {
-  const path = window.location.pathname;
-  return path.startsWith("/ar/") ? "ar" : "en";
+    const path = window.location.pathname;
+    // التأكد من أن /ar/ موجودة
+    return path.includes("/ar/") ? "ar" : "en";
 }
 
 let currentLang = getLangFromURL();
 
 // Auto redirect based on browser language (first visit only)
 (function redirectByBrowserLang() {
-  if (!localStorage.getItem("lang")) {
-    const userLang = navigator.language || navigator.userLanguage;
-    const isArabic = userLang.startsWith("ar");
-    const path = window.location.pathname;
+    if (!localStorage.getItem("lang")) {
+        const userLang = navigator.language || navigator.userLanguage;
+        const isArabic = userLang.startsWith("ar");
+        let path = window.location.pathname;
 
-    if (isArabic && !path.startsWith("/ar/")) {
-      window.location.href = "/ar" + path;
-    } else if (!isArabic && path.startsWith("/ar/")) {
-      window.location.href = path.replace(/^\/ar/, "");
+        // تحديد المجلد الأساسي للمشروع
+        const baseDirName = 'global-nexus';
+        const baseDir = path.includes(`/${baseDirName}`) ? `/${baseDirName}` : '';
+
+        // تنظيف المسار من مجلد اللغة لتبسيط العملية
+        path = path.replace(baseDir, '').replace(/^\/ar\/?/, '');
+
+        // بناء المسار الجديد
+        let newPath = '';
+
+        if (isArabic && !window.location.pathname.includes("/ar/")) {
+            newPath = `${baseDir}/ar/${path}`;
+        } else if (!isArabic && window.location.pathname.includes("/ar/")) {
+            newPath = `${baseDir}/${path}`;
+        }
+
+        if (newPath) {
+            window.location.href = newPath.replace(/\/{2,}/g, '/');
+        }
     }
-  }
 })();
 
 localStorage.setItem("lang", currentLang);
 
 // LANG USER
 async function loadLanguage(lang) {
-  try {
-    const response = await fetch(getPath(`lang/${lang}.json`));
-    const data = await response.json();
+    try {
+        const response = await fetch(getPath(`lang/${lang}.json`));
+        const data = await response.json();
 
-    document.querySelectorAll("[data-lang]").forEach((el) => {
-      const key = el.getAttribute("data-lang");
-      if (data[key]) el.textContent = data[key];
-    });
+        document.querySelectorAll("[data-lang]").forEach((el) => {
+            const key = el.getAttribute("data-lang");
+            if (data[key]) el.textContent = data[key];
+        });
 
-    document.querySelectorAll("[data-lang-placeholder]").forEach((el) => {
-      const key = el.getAttribute("data-lang-placeholder");
-      if (data[key]) el.placeholder = data[key];
-    });
+        document.querySelectorAll("[data-lang-placeholder]").forEach((el) => {
+            const key = el.getAttribute("data-lang-placeholder");
+            if (data[key]) el.placeholder = data[key];
+        });
 
-    document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
-    document.documentElement.lang = lang;
+        document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+        document.documentElement.lang = lang;
 
-    updateLangButtons(lang);
-  } catch (error) {
-    console.error("Error loading language file:", error);
-  }
+        updateLangButtons(lang);
+    } catch (error) {
+        console.error("Error loading language file:", error);
+    }
 }
 
 // UPDATE BUTTON
 function updateLangButtons(lang) {
-  const label = lang === "ar" ? "عربي" : "English";
-  const btn = document.getElementById("langBtn");
-  const btnMobile = document.getElementById("langBtnMobile");
-  if (btn) btn.textContent = label;
-  if (btnMobile) btnMobile.textContent = label;
+    const label = lang === "ar" ? "عربي" : "English";
+    const btn = document.getElementById("langBtn");
+    const btnMobile = document.getElementById("langBtnMobile");
+    if (btn) btn.textContent = label;
+    if (btnMobile) btn.textContent = label;
 }
 
 // DROPDOWN
 function setupLangDropdown(dropdown) {
-  const btn = dropdown.querySelector(".lang-btn");
-  const menu = dropdown.querySelector(".lang-menu");
+    const btn = dropdown.querySelector(".lang-btn");
+    const menu = dropdown.querySelector(".lang-menu");
 
-  if (!btn || !menu) return;
+    if (!btn || !menu) return;
 
-  btn.addEventListener("click", (e) => {
-    e.stopPropagation();
-    document.querySelectorAll(".lang-dropdown").forEach((d) => d.classList.remove("active"));
-    dropdown.classList.toggle("active");
-  });
-
-  menu.querySelectorAll("[data-lang-option]").forEach((item) => {
-    item.addEventListener("click", (e) => {
-      const selected = e.target.getAttribute("data-lang-option");
-      localStorage.setItem("lang", selected);
-      dropdown.classList.remove("active");
-
-      currentLang = selected;
-
-      // إذا نحن في صفحة blogdetails.html، فقط أعد تحميل المقال من JSON
-      if (window.location.pathname.includes("blogdetails.html")) {
-        fetchAndRenderBlogs(currentLang);
-      } else {
-        const currentPath = window.location.pathname.replace(/^\/ar/, "");
-        const newPath = selected === "ar" ? `/ar${currentPath}` : currentPath;
-        window.location.href = newPath;
-      }
+    btn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        document.querySelectorAll(".lang-dropdown").forEach((d) => d.classList.remove("active"));
+        dropdown.classList.toggle("active");
     });
-  });
+
+    menu.querySelectorAll("[data-lang-option]").forEach((item) => {
+        item.addEventListener("click", (e) => {
+            const selected = e.target.getAttribute("data-lang-option");
+            localStorage.setItem("lang", selected);
+            dropdown.classList.remove("active");
+
+            currentLang = selected;
+
+            // إذا نحن في صفحة blogdetails.html، فقط أعد تحميل المقال من JSON
+            if (window.location.pathname.includes("blogdetails.html")) {
+                fetchAndRenderBlogs(currentLang);
+            } else {
+                // *** منطق تبديل اللغة المُعدّل لحل مشكلة 404 ***
+
+                // 1. تحديد المجلد الأساسي للمشروع
+                const baseDirName = 'global-nexus';
+                const baseDir = window.location.pathname.includes(`/${baseDirName}`) ? `/${baseDirName}` : '';
+
+                // 2. تنظيف المسار الحالي من اللغة والمجلد الأساسي
+                let currentPath = window.location.pathname.replace(baseDir, ''); // إزالة /global-nexus
+                currentPath = currentPath.replace(/^\/ar\/?/, ''); // إزالة /ar/ أو /ar
+
+                // 3. التأكد من أن المسار يبدأ بـ /
+                if (!currentPath.startsWith('/')) currentPath = '/' + currentPath;
+
+                // 4. بناء المسار الجديد: /global-nexus + /ar + /page/blog.html
+                let newPath = baseDir;
+
+                if (selected === "ar") {
+                    newPath += '/ar';
+                }
+
+                newPath += currentPath;
+
+                // 5. التخلص من أي // في المسار
+                newPath = newPath.replace(/\/{2,}/g, '/');
+
+                window.location.href = newPath;
+            }
+        });
+    });
 }
 
 // CLOSE DROPDOWN
 document.addEventListener("click", () => {
-  document.querySelectorAll(".lang-dropdown").forEach((d) => d.classList.remove("active"));
+    document.querySelectorAll(".lang-dropdown").forEach((d) => d.classList.remove("active"));
 });
 
 document.querySelectorAll(".lang-dropdown").forEach(setupLangDropdown);
@@ -159,28 +213,28 @@ loadLanguage(currentLang);
 // Reveal on scroll using IntersectionObserver
 const reveals = document.querySelectorAll('.reveal');
 const obsOptions = {
-  root: null,
-  rootMargin: "0px 0px -5% 0px",
-  threshold: 0.15
+    root: null,
+    rootMargin: "0px 0px -5% 0px",
+    threshold: 0.15
 };
 
 const revealObserver = new IntersectionObserver((entries, obs) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('is-visible');
-      obs.unobserve(entry.target);
-    }
-  });
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            obs.unobserve(entry.target);
+        }
+    });
 }, obsOptions);
 
 reveals.forEach(el => revealObserver.observe(el));
 
 // Scroll to top
 function scrollToTop() {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
-  });
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
 }
 
 // * BLOG DATA & RENDER
@@ -188,92 +242,115 @@ const blogCardsContainer = document.getElementById('blogsGrid');
 const blogDetailSection = document.getElementById('blogDetail');
 
 async function fetchAndRenderBlogs(lang) {
-  try {
-    const res = await fetch(getPath('blog.json'));
-    if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
-    const blogs = await res.json();
+    try {
+        const res = await fetch(getPath('blog.json'));
+        if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
+        const blogs = await res.json();
 
-    if (blogCardsContainer) renderBlogCards(blogs, lang);
-    if (blogDetailSection) renderBlogDetails(blogs, lang);
+        if (blogCardsContainer) renderBlogCards(blogs, lang);
+        if (blogDetailSection) renderBlogDetails(blogs, lang);
 
-    if (blogCardsContainer || blogDetailSection) {
-      setTimeout(() => loadLanguage(lang), 150);
-    }
-  } catch (error) {
-    console.error("Error loading blog data:", error);
-    const currentLang = localStorage.getItem("lang") || "en";
+        if (blogCardsContainer || blogDetailSection) {
+            setTimeout(() => loadLanguage(lang), 150);
+        }
+    } catch (error) {
+        console.error("Error loading blog data:", error);
+        const currentLang = localStorage.getItem("lang") || "en";
 
-    if (blogCardsContainer) {
-      blogCardsContainer.innerHTML = `<p class="error-message" data-lang="blog_error_load_posts">Failed to load blog posts. Please try again later.</p>`;
+        if (blogCardsContainer) {
+            blogCardsContainer.innerHTML = `<p class="error-message" data-lang="blog_error_load_posts">Failed to load blog posts. Please try again later.</p>`;
+        }
+        if (blogDetailSection) {
+            blogDetailSection.innerHTML = `<p class="error-message" data-lang="blog_error_load">Failed to load blog details. Please try again later.</p>`;
+        }
+        setTimeout(() => loadLanguage(currentLang), 150);
     }
-    if (blogDetailSection) {
-      blogDetailSection.innerHTML = `<p class="error-message" data-lang="blog_error_load">Failed to load blog details. Please try again later.</p>`;
-    }
-    setTimeout(() => loadLanguage(currentLang), 150);
-  }
 }
 
 function renderBlogCards(blogs, lang) {
-  if (!blogCardsContainer || !blogs) return;
-  blogCardsContainer.innerHTML = '';
-  blogs.forEach(blog => {
-    const title = lang === 'ar' && blog.title_ar ? blog.title_ar : blog.title_en;
-    blogCardsContainer.innerHTML += `
-<div class="blog-card">
-<a href="./blogdetails.html?id=${blog.id}">
-<img src="${getPath(blog.image)}" alt="${title}">
-<h4>${title}</h4>
-<p class="date">${blog.date}</p>
-</a>
-</div>
-`;
-  });
+    if (!blogCardsContainer || !blogs) return;
+    blogCardsContainer.innerHTML = '';
+    
+    // تحديد المسار الأساسي بناءً على اللغة
+    // إذا كانت lang == 'ar'، يكون المسار '/global-nexus/ar/blog/'
+    // إذا كانت lang != 'ar'، يكون المسار '/global-nexus/blog/'
+    const basePath = lang === 'ar' ? '/global-nexus/ar/blog/' : '/global-nexus/blog/';
+
+    blogs.forEach(blog => {
+        const title = lang === 'ar' && blog.title_ar ? blog.title_ar : blog.title_en;
+        blogCardsContainer.innerHTML += `
+            <div class="blog-card">
+                <a href="${basePath}${blog.id}"> 
+                    <img src="${getPath(blog.image)}" alt="${title}">
+                    <h4>${title}</h4>
+                    <p class="date">${blog.date}</p>
+                </a>
+            </div>
+        `;
+    });
 }
 
 function renderBlogDetails(blogs, lang) {
-  if (!blogDetailSection || !blogs) return;
-  const params = new URLSearchParams(window.location.search);
-  const blogId = parseInt(params.get('id'), 10);
-  const blog = blogs.find(b => b.id === blogId);
+    if (!blogDetailSection || !blogs) return;
 
-  if (blog) {
-    const title = lang === 'ar' && blog.title_ar ? blog.title_ar : blog.title_en;
-    const mainTitle = lang === 'ar' && blog.mainTitle_ar ? blog.mainTitle_ar : blog.mainTitle_en;
-    const subSections = lang === 'ar' && blog.subSections_ar ? blog.subSections_ar : blog.subSections_en;
+    // 1. استخراج الـ ID من المسار النظيف (مثال: /global-nexus/blog/1)
+    const path = window.location.pathname;
+    // تقسيم المسار والحصول على آخر جزء (يجب أن يكون الـ ID)
+    const pathSegments = path.split('/').filter(segment => segment);
+    const blogIdSegment = pathSegments[pathSegments.length - 1];
+    const blogId = parseInt(blogIdSegment, 10);
 
-    blogDetailSection.innerHTML = `
-  <div class="blog-detail-card">
-    <div class="blog-image-wrapper">
-      <img src="${getPath(blog.image)}" alt="${title}" class="blog-image">
-    </div>
+    // التحقق من صحة الـ ID
+    if (isNaN(blogId)) {
+        blogDetailSection.innerHTML = `<p class="error-message" data-lang="blog_error_not_found">Blog post not found or invalid ID.</p>`;
+        // إضافة رابط العودة حتى في حالة الخطأ
+        blogDetailSection.innerHTML += `<a href="/global-nexus/blog" class="back-btn" data-lang="blog_back">← العودة إلى المدونة</a>`;
+        return;
+    }
 
-    <div class="blog-content-wrapper">
-      <p class="blog-date">${blog.date}</p>
-      <h2 class="blog-title">${title}</h2>
+    // 2. البحث عن المدونة باستخدام الـ ID المستخرج
+    const blog = blogs.find(b => b.id === blogId);
 
-      <div class="blog-content">
-        <h3 class="main-blog-title">${mainTitle}</h3>
+    if (blog) {
+        const title = lang === 'ar' && blog.title_ar ? blog.title_ar : blog.title_en;
+        const mainTitle = lang === 'ar' && blog.mainTitle_ar ? blog.mainTitle_ar : blog.mainTitle_en;
+        const subSections = lang === 'ar' && blog.subSections_ar ? blog.subSections_ar : blog.subSections_en;
 
-        ${Array.isArray(subSections)
-        ? subSections.map(sub => `
-              <div class="blog-subsection">
-                <h4 class="blog-subtitle">${sub.subtitle}</h4>
-                <p class="blog-text">${sub.text}</p>
-              </div>
-            `).join('')
-        : ''
-      }
-      </div>
+        blogDetailSection.innerHTML = `
+            <div class="blog-detail-card">
+                <div class="blog-image-wrapper">
+                    <img src="${getPath(blog.image)}" alt="${title}" class="blog-image">
+                </div>
 
-      <a href="blog.html" class="back-btn" data-lang="blog_back">← العودة إلى المدونة</a>
-    </div>
-  </div>
-`;
-    setTimeout(() => loadLanguage(lang), 50);
-  } else {
-    blogDetailSection.innerHTML = `<p class="error-message" data-lang="blog_error_not_found">Blog post not found.</p>`;
-    setTimeout(() => loadLanguage(lang), 50);
-  }
+                <div class="blog-content-wrapper">
+                    <p class="blog-date">${blog.date}</p>
+                    <h2 class="blog-title">${title}</h2>
+
+                    <div class="blog-content">
+                        <h3 class="main-blog-title">${mainTitle}</h3>
+
+                        ${Array.isArray(subSections)
+                ? subSections.map(sub => `
+                                <div class="blog-subsection">
+                                    <h4 class="blog-subtitle">${sub.subtitle}</h4>
+                                    <p class="blog-text">${sub.text}</p>
+                                </div>
+                            `).join('')
+                : ''
+            }
+                    </div>
+
+                    <a href="/global-nexus/blog" class="back-btn" data-lang="blog_back">← العودة إلى المدونة</a>
+                </div>
+            </div>
+        `;
+        setTimeout(() => loadLanguage(lang), 50);
+    } else {
+        blogDetailSection.innerHTML = `<p class="error-message" data-lang="blog_error_not_found">Blog post not found.</p>`;
+        // إضافة رابط العودة
+        blogDetailSection.innerHTML += `<a href="/global-nexus/blog" class="back-btn" data-lang="blog_back">← العودة إلى المدونة</a>`;
+        setTimeout(() => loadLanguage(lang), 50);
+    }
 }
 
 // Initial fetch
@@ -286,64 +363,64 @@ const themeOverlay = document.getElementById("theme-overlay");
 const themeIcon = themeOverlay ? themeOverlay.querySelector(".theme-icon") : null;
 
 function updateThemeUI(isDark, btn) {
-  btn.classList.toggle('active', isDark);
-  btn.setAttribute('aria-pressed', String(!!isDark));
-  btn.title = isDark ? 'Switch to light mode' : 'Switch to dark mode';
-  btn.innerHTML = isDark ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+    btn.classList.toggle('active', isDark);
+    btn.setAttribute('aria-pressed', String(!!isDark));
+    btn.title = isDark ? 'Switch to light mode' : 'Switch to dark mode';
+    btn.innerHTML = isDark ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
 }
 
 if (currentTheme === "dark") {
-  document.body.classList.add("dark-mode");
+    document.body.classList.add("dark-mode");
 }
 
 themeToggles.forEach(btn => {
-  const isDark = document.body.classList.contains('dark-mode');
-  updateThemeUI(isDark, btn);
-  btn.setAttribute('role', 'button');
+    const isDark = document.body.classList.contains('dark-mode');
+    updateThemeUI(isDark, btn);
+    btn.setAttribute('role', 'button');
 
-  btn.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter' || e.key === ' ') {
-      e.preventDefault();
-      btn.click();
-    }
-  });
-
-  btn.addEventListener("click", () => {
-    if (!themeOverlay || !themeIcon) return;
-
-    const isCurrentlyDark = document.body.classList.contains("dark-mode");
-    themeIcon.className = `theme-icon fas ${isCurrentlyDark ? 'fa-sun' : 'fa-moon'}`;
-
-    themeOverlay.style.display = "flex";
-
-    requestAnimationFrame(() => {
-      themeOverlay.classList.add("active");
+    btn.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            btn.click();
+        }
     });
 
-    setTimeout(() => {
-      document.body.classList.toggle("dark-mode");
-      const isDarkNow = document.body.classList.contains("dark-mode");
-      themeToggles.forEach(t => updateThemeUI(isDarkNow, t));
-      localStorage.setItem("theme", isDarkNow ? "dark" : "light");
-    }, 150);
+    btn.addEventListener("click", () => {
+        if (!themeOverlay || !themeIcon) return;
 
-    setTimeout(() => {
-      themeOverlay.classList.remove("active");
-      setTimeout(() => {
-        themeOverlay.style.display = "none";
-      }, 600);
-    }, 800);
-  });
+        const isCurrentlyDark = document.body.classList.contains("dark-mode");
+        themeIcon.className = `theme-icon fas ${isCurrentlyDark ? 'fa-sun' : 'fa-moon'}`;
+
+        themeOverlay.style.display = "flex";
+
+        requestAnimationFrame(() => {
+            themeOverlay.classList.add("active");
+        });
+
+        setTimeout(() => {
+            document.body.classList.toggle("dark-mode");
+            const isDarkNow = document.body.classList.contains("dark-mode");
+            themeToggles.forEach(t => updateThemeUI(isDarkNow, t));
+            localStorage.setItem("theme", isDarkNow ? "dark" : "light");
+        }, 150);
+
+        setTimeout(() => {
+            themeOverlay.classList.remove("active");
+            setTimeout(() => {
+                themeOverlay.style.display = "none";
+            }, 600);
+        }, 800);
+    });
 });
 
 // PAGE OVERLAY
 window.addEventListener("load", () => {
-  const pageOverlay = document.getElementById("page-overlay");
-  if (!pageOverlay) return;
+    const pageOverlay = document.getElementById("page-overlay");
+    if (!pageOverlay) return;
 
-  pageOverlay.style.zIndex = 9000;
-  pageOverlay.classList.add("hidden");
-  setTimeout(() => {
-    pageOverlay.style.display = "none";
-  }, 2000);
+    pageOverlay.style.zIndex = 9000;
+    pageOverlay.classList.add("hidden");
+    setTimeout(() => {
+        pageOverlay.style.display = "none";
+    }, 2500);
 });

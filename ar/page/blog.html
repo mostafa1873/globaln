@@ -16,18 +16,15 @@
 
     <meta name="robots" content="index, follow" />
 
-    <link rel="canonical" href="https://www.globalnexus.com/ar/page/blog.html" />
-    <link rel="alternate" href="https://www.globalnexus.com/blog" hreflang="en" />
-    <link rel="alternate" href="https://www.globalnexus.com/ar/page/blog.html" hreflang="ar" />
-
-
+    <link rel="canonical" href="https://www.globalnexus.com/ar/blog" />
     <link rel="alternate" href="https://www.globalnexus.com/blog" hreflang="en" />
     <link rel="alternate" href="https://www.globalnexus.com/ar/blog" hreflang="ar" />
+
 
     <meta property="og:title" content="المدونة | جلوبال نيكسس" />
     <meta property="og:description" content="أحدث الرؤى والأخبار من خبراء جلوبال نيكسس الرقميين." />
     <meta property="og:image" content="https://www.globalnexus.com/images/preview.jpg" />
-    <meta property="og:url" content="https://www.globalnexus.com/blog" />
+    <meta property="og:url" content="https://www.globalnexus.com/ar/blog" />
     <meta property="og:type" content="website" />
 
     <meta name="twitter:card" content="summary_large_image" />
@@ -35,15 +32,15 @@
     <meta name="twitter:description" content="أحدث الرؤى والأخبار من خبراء جلوبال نيكسس الرقميين." />
     <meta name="twitter:image" content="https://www.globalnexus.com/images/preview.jpg" />
 
-    <link rel="icon" href="../lang/" loading="lazy" type="image/webp" />
-    <link rel="preload" href="../../css/all.min.css" as="style" onload="this.rel='stylesheet'">
+    <link rel="icon" href="/global-nexus/img/titlelogo.webp" type="image/webp" />
+    <link rel="preload" href="/global-nexus/css/all.min.css" as="style" onload="this.rel='stylesheet'">
     <noscript>
-        <link rel="stylesheet" href="../../css/all.min.css">
+        <link rel="stylesheet" href="/global-nexus/css/all.min.css">
     </noscript>
 
-    <link rel="preload" href="../../css/style.css" as="style" onload="this.rel='stylesheet'">
+    <link rel="preload" href="/global-nexus/css/style.css" as="style" onload="this.rel='stylesheet'">
     <noscript>
-        <link rel="stylesheet" href="../../css/style.css">
+        <link rel="stylesheet" href="/global-nexus/css/style.css">
     </noscript>
 </head>
 
@@ -51,24 +48,25 @@
 
     <div id="page-overlay">
         <div class="overlay-content">
-            <img src="../../img/titlelogo.webp" alt="الشعار" class="overlay-logo" />
+            <img src="/global-nexus/img/titlelogo.webp" alt="الشعار" class="overlay-logo" />
         </div>
     </div>
-
 
     <header class="header" id="navbar">
         <div class="nav-wrapper">
             <nav class="nav-content">
-                <div class="logo"><img id="logo" style="width: 80%;" src="../../img/header.svg"
-                        alt="وكالة جلوبال نيكسس للتسويق الرقمي"></div>
+                <div class="logo">
+                    <img id="logo" style="width: 80%;" src="/global-nexus/img/header.svg"
+                        alt="وكالة جلوبال نيكسس للتسويق الرقمي">
+                </div>
 
                 <ul class="nav-right nav-list">
-                    <li><a href="../index.html#home" data-lang="nav_home">الرئيسية</a></li>
-                    <li><a href="../index.html#about" data-lang="nav_about">من نحن</a></li>
-                    <li><a href="../index.html#services" data-lang="nav_services">الخدمات</a></li>
-                    <li><a href="../index.html#projects" data-lang="nav_projects">المشاريع</a></li>
-                    <li><a href="blog.html" data-lang="nav_blog">المدونة</a></li>
-                    <li><a href="contact.html" data-lang="nav_contact">اتصل بنا</a></li>
+                    <li><a href="/global-nexus/ar/#home" data-lang="nav_home">الرئيسية</a></li>
+                    <li><a href="/global-nexus/ar/#about" data-lang="nav_about">من نحن</a></li>
+                    <li><a href="/global-nexus/ar/#services" data-lang="nav_services">الخدمات</a></li>
+                    <li><a href="/global-nexus/ar/#projects" data-lang="nav_projects">المشاريع</a></li>
+                    <li><a href="/global-nexus/ar/blog" data-lang="nav_blog">المدونة</a></li>
+                    <li><a href="/global-nexus/ar/contact" data-lang="nav_contact">اتصل بنا</a></li>
 
 
                     <button id="theme-toggle" class="theme-toggle" aria-label="تبديل الوضع الداكن/الفاتح">
@@ -78,8 +76,10 @@
                     <li class="lang-dropdown">
                         <button id="langBtn" class="lang-btn" data-lang="nav_lang_english">English</button>
                         <ul class="lang-menu" id="langMenu">
-                            <li data-lang-option="en" data-lang="nav_lang_english">English</li>
-                            <li data-lang-option="ar" data-lang="nav_lang_arabic">عربي</li>
+                            <li data-lang-option="en" data-lang="nav_lang_english"><a
+                                    href="/global-nexus/blog">English</a></li>
+                            <li data-lang-option="ar" data-lang="nav_lang_arabic"><a
+                                    href="/global-nexus/ar/blog">عربي</a></li>
                         </ul>
                     </li>
 
@@ -93,12 +93,12 @@
             </nav>
 
             <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
-                <li><a href="../index.html#home" data-lang="nav_home">الرئيسية</a></li>
-                <li><a href="../index.html#about" data-lang="nav_about">من نحن</a></li>
-                <li><a href="../index.html#services" data-lang="nav_services">الخدمات</a></li>
-                <li><a href="../index.html#projects" data-lang="nav_projects">المشاريع</a></li>
-                <li><a href="blog.html" data-lang="nav_blog">المدونة</a></li>
-                <li><a href="contact.html" data-lang="nav_contact">اتصل بنا</a></li>
+                <li><a href="/global-nexus/ar/#home" data-lang="nav_home">الرئيسية</a></li>
+                <li><a href="/global-nexus/ar/#about" data-lang="nav_about">من نحن</a></li>
+                <li><a href="/global-nexus/ar/#services" data-lang="nav_services">الخدمات</a></li>
+                <li><a href="/global-nexus/ar/#projects" data-lang="nav_projects">المشاريع</a></li>
+                <li><a href="/global-nexus/ar/blog" data-lang="nav_blog">المدونة</a></li>
+                <li><a href="/global-nexus/ar/contact" data-lang="nav_contact">اتصل بنا</a></li>
 
                 <button style="margin-bottom: 20px;" id="theme-toggle" class="theme-toggle"
                     aria-label="تبديل الوضع الداكن/الفاتح">
@@ -108,8 +108,10 @@
                 <li class="lang-dropdown mobile-lang">
                     <button id="langBtnMobile" class="lang-btn" data-lang="nav_lang_english">English</button>
                     <ul class="lang-menu" id="langMenuMobile">
-                        <li data-lang-option="en" data-lang="nav_lang_english">English</li>
-                        <li data-lang-option="ar" data-lang="nav_lang_arabic">عربي</li>
+                        <li data-lang-option="en" data-lang="nav_lang_english"><a href="/global-nexus/blog">English</a>
+                        </li>
+                        <li data-lang-option="ar" data-lang="nav_lang_arabic"><a href="/global-nexus/ar/blog">عربي</a>
+                        </li>
                     </ul>
                 </li>
 
@@ -117,10 +119,10 @@
         </div>
     </header>
 
-
     <section class="heroB clouds-hero" id="home">
         <div class="container hero-inner">
             <div class="hero-left reveal">
+            </div>
     </section>
 
     <header class="headerblog">
@@ -134,20 +136,19 @@
         </div>
     </main>
 
-
     <div class="floating-buttons">
         <a href="https://wa.me/201109458238" target="_blank" class="floating-btn whatsapp" aria-label="واتساب">
             <i class="fab fa-whatsapp"></i>
         </a>
     </div>
 
-
     <footer class="footer">
         <div class="container footer-inner">
 
             <div class="footer-brand">
                 <h3>
-                    <div><img id="logo" loading="lazy" src="../../img/header.svg"
+                    <div>
+                        <img id="logo" loading="lazy" src="/global-nexus/img/header.svg"
                             alt="وكالة جلوبال نيكسس للتسويق الرقمي">
                     </div>
                 </h3>
@@ -157,10 +158,10 @@
             <div class="footer-links">
                 <h4 data-lang="footer_links_title">روابط سريعة</h4>
                 <ul>
-                    <li><a href="../index.html#about" data-lang="footer_links_about">من نحن</a></li>
-                    <li><a href="../index.html#services" data-lang="footer_links_services">الخدمات</a></li>
-                    <li><a href="../index.html#projects" data-lang="footer_links_projects">المشاريع</a></li>
-                    <li><a href="../index.html#contact" data-lang="footer_links_contact">اتصل بنا</a></li>
+                    <li><a href="/global-nexus/ar/#about" data-lang="footer_links_about">من نحن</a></li>
+                    <li><a href="/global-nexus/ar/#services" data-lang="footer_links_services">الخدمات</a></li>
+                    <li><a href="/global-nexus/ar/#projects" data-lang="footer_links_projects">المشاريع</a></li>
+                    <li><a href="/global-nexus/ar/contact" data-lang="footer_links_contact">اتصل بنا</a></li>
                 </ul>
             </div>
 
@@ -189,13 +190,11 @@
         </div>
     </footer>
 
-
     <div id="theme-overlay" class="theme-overlay">
         <i class="theme-icon fas fa-moon"></i>
     </div>
 
-
-    <script src="../js/main.js" defer></script>
+    <script src="/global-nexus/js/main.js" defer></script>
 
 </body>
 

@@ -1,34 +1,49 @@
-# Enable Rewrite Engine
+# -----------------------------------------------
+# ملف .htaccess للمجلد الفرعي /global-nexus/
+# يتوافق مع هيكل الملفات: EN: /page/ | AR: /ar/page/
+# -----------------------------------------------
+
+# تشغيل محرك إعادة الكتابة
 RewriteEngine On
 
-# ------------------------
-# Remove .html from URLs
-# ------------------------
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^([a-zA-Z0-9\-_]+)/?$ $1.html [L]
+# تحديد المسار الأساسي للمشروع
+RewriteBase /global-nexus/
 
-# ------------------------
-# Arabic pages (under /ar/page/)
-# ------------------------
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^ar/([a-zA-Z0-9\-_]+)/?$ ar/page/$1.html [L]
+# القاعدة الأساسية (الهامة جدًا):
+# تجاهل إعادة الكتابة إذا كان الطلب يشير إلى ملف أو مجلد موجود بالفعل
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
 
-# ------------------------
-# Blog details pretty URL
-# ------------------------
-# English
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^blog/([0-9]+)/?$ page/blogdetails.html?id=$1 [L,QSA]
 
-# Arabic
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
+# -----------------------------------------------
+# قواعد الروابط العربية (ARABIC RULES) - مصححة
+# -----------------------------------------------
+
+# 1. قاعدة ARABIC: لصفحات الناف بار (ar/blog, ar/contact, etc.)
+# الهدف: /global-nexus/ar/contact  --->  /global-nexus/ar/page/contact.html
+# $1 تلتقط اسم الصفحة (contact|blog|...)
+# التعديل: إزالة 'ar/' من الوجهة، حيث أن 'ar/' يتم تضمينه تلقائياً
+# بواسطة مسار الملف، ولأن RewriteBase تعالج الجزء الأول من المسار.
+RewriteRule ^ar/(blog|contact|marketing|development|business|branding)/?$ ar/page/$1.html [L]
+
+
+# 2. قاعدة ARABIC: لصفحة تفاصيل المدونة (ar/blog/2)
+# الهدف: /global-nexus/ar/blog/2   --->  /global-nexus/ar/page/blogdetails.html?id=2
+# $1 تلتقط الـ ID.
+# التعديل: يجب أن نستخدم ar/page/ ونمرر الـ ID بالـ $1.
 RewriteRule ^ar/blog/([0-9]+)/?$ ar/page/blogdetails.html?id=$1 [L,QSA]
 
-# ------------------------
-# Custom 404 page
-# ------------------------
-ErrorDocument 404 /404.html
+
+# --------------- قواعد الروابط الإنجليزية (ENGLISH RULES) ----------------
+
+# (تم فصل هذه القواعد لضمان عملها بشكل مستقل كما طلبت)
+
+# 3. قاعدة ENGLISH: لصفحات الناف بار (blog, contact, etc.)
+# الهدف: /global-nexus/contact   --->  /global-nexus/page/contact.html
+RewriteRule ^(blog|contact|marketing|development|business|branding)/?$ page/$1.html [L]
+
+
+# 4. قاعدة ENGLISH: لصفحة تفاصيل المدونة (blog/2)
+# الهدف: /global-nexus/blog/2    --->  /global-nexus/page/blogdetails.html?id=2
+RewriteRule ^blog/([0-9]+)/?$ page/blogdetails.html?id=$1 [L,QSA]
